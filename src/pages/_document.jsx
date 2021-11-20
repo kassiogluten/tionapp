@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Epilogue&family=Roboto:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+          <link rel="shortcut icon" href="/favicon.jpg" type="image/jpg" />
         </Head>
         <body>
           <ColorModeScript initialColorMode={"dark"} />

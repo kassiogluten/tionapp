@@ -2,11 +2,8 @@ import {
   Flex,
   Text,
   Heading,
-  Wrap,
   VStack,
-  HStack,
   Input,
-  Button,
   useToast,
   FormLabel,
 } from "@chakra-ui/react";
@@ -15,33 +12,50 @@ import { Botao } from "./Botao";
 
 import { useForm } from "react-hook-form";
 
-import axios from "axios";
 
 import { useState } from "react";
 
+
 export function Cadastro() {
+
+  
   const {
     register,
     trigger,
     reset,
     handleSubmit,
+    watch,
     formState: { errors, isValid },
   } = useForm({ mode: "all" });
-
-  const [isLoading, setIsLoading] = useState(false);
-  const toast = useToast();
-
-  async function handleSendMessage(data) {
+  
+  async function submitHandler(data) {
     setIsLoading(true);
 
-    toast({
-      title: "ATENÇÃO !",
-      description: "Recebimento da mensagem ainda em construção.",
-      status: "info",
-      isClosable: true,
-      position: "top",
-      onCloseComplete: () => setIsLoading(false),
+    await fetch('/api/sheets', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
+    
+    toast({
+      title: "Enviado !",
+      description: `Olá ${Nome}, recebemos seus dados, entraremos em contato no número ${Telefone} para finalizar seu cadastro e agendar a vistoria.`,
+      status: "success",
+      isClosable: true,
+      position: "bottom",
+    });
+    setIsLoading(false)
+    
+  }
+  
+  const [isLoading, setIsLoading] = useState(false);
+  const toast = useToast();
+  const { Nome, Email, Telefone } = watch();
+
+  async function handleSendMessage(data) {
+
   }
   return (
     <Flex p={4} as="section" justify="center" align="center" w="100%">
@@ -51,15 +65,13 @@ export function Cadastro() {
         flexDir="column"
         flex={1}
         as="form"
-        onSubmit={handleSubmit(handleSendMessage)}
+        onSubmit={handleSubmit(submitHandler)}
       >
         <Heading textAlign="center" fontWeight="bold" fontSize={24}>
-          Faça o cadastro
+          Faça o pré-cadastro
         </Heading>
         <VStack w="full" py={8} align="start">
-          <FormLabel htmlFor="Nome">
-            Nome
-          </FormLabel>
+          <FormLabel htmlFor="Nome">Nome</FormLabel>
           <Input
             borderRadius={0}
             bg="branco"
@@ -104,7 +116,8 @@ export function Cadastro() {
           {errors.Telefone && <Text color="red">Telefone obrigatório!</Text>}
         </VStack>
         {!isValid ? (
-          <Botao mt={4}
+          <Botao
+            mt={4}
             sx={{ cursor: "not-allowed" }}
             opacity=".3"
             bg="pessego"
@@ -118,7 +131,8 @@ export function Cadastro() {
             text="Cadastrar"
           />
         ) : (
-          <Botao mt={4}
+          <Botao
+            mt={4}
             _loading={{ color: "white" }}
             isLoading={isLoading}
             h="56px"

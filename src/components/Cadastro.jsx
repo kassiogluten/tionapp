@@ -46,17 +46,16 @@ export function Cadastro() {
       isClosable: true,
       position: "bottom",
     });
+    
     setIsLoading(false)
     
   }
   
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
-  const { Nome, Email, Telefone } = watch();
+  const { Nome, Telefone } = watch();
 
-  async function handleSendMessage(data) {
-
-  }
+  
   return (
     <Flex p={4} as="section" justify="center" align="center" w="100%">
       <Flex

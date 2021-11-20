@@ -28,13 +28,13 @@ async function handler(req, res) {
       range: 'Cadastros!A2:Z',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[Nome, Email, Telefone, new Date().toLocaleString('pt-BR')]],
+        values: [[Nome, Email, Telefone, new Date().toLocaleString('pt-BR','America/Sao_Paulo')]],
       },
     });
 
     res.status(201).json({ message: 'It works!', response });
   }
-  res.status(200).json({ message: 'Hey!' });
+  // res.status(200).json({ message: 'Hey!' });
 }
 
 export default handler;

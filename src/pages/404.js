@@ -19,12 +19,11 @@ export default function Custom404() {
         <title>ERRO 404</title>
       </Head>
       <Header />
-      <Box align="center" w="100%" bg="blue.100">
+      <Box align="center" w="100%">
         <Flex
           p="5rem 1rem"
           align="center"
           maxW={1200}
-          bg="blue.50"
           justify="space-between"
           h={400}
           flexDir="column"

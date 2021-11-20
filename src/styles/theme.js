@@ -4,11 +4,15 @@ export const theme = extendTheme({
   initialColorMode: "dark",
   useSystemColorMode: false,
   fonts: {
-    heading: "CaviarDreams",
-    body: "CaviarDreams",
+    heading: "Space Grotesk",
+    body: "Epilogue",
   },
   colors: {
-    rosaxoq: "#ff00ff",
+    branco: "#ffffff",
+    azul: "#001A34",
+    azul1: "#002C58",
+    pessego: "#FF4655",
+    gradient2: "#F37053",
   },
   components: {
     Button: {
@@ -30,9 +34,9 @@ export const theme = extendTheme({
         },
       },
       body: {
-        /* bg: "var(--white)",
-        color: "var(--white)",
-        lineHeight: "inherit", */
+        bg: "azul",
+        color: "branco",
+        // lineHeight: "inherit",
       },
     },
   },

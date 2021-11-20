@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+body{
+  background: url(/bg-header.jpg) no-repeat center top, #001A34 !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;

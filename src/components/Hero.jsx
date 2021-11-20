@@ -1,32 +1,29 @@
-import React from "react";
 import {
-  Box,
   Flex,
-  Heading,
   Text,
-  Stack,
   VStack,
-  HStack,
-  Center,
-  Button,
 } from "@chakra-ui/react";
+import { Botao } from "./Botao";
+
+import Image from 'next/image'
 
 export function Hero() {
   return (
-    <Flex as="section" justify="center" align="center" w="100%" bg="blue.900">
+    <Flex  as="section" justify="center" align="center" w="100%">
       <Flex
         p="5rem 1rem"
         align="center"
-        maxW={1200}
-        w="full"
-        bg="blue.500"
-        justify="space-between"
-        h={700}
-        flexDir={{ base: "column", sm: "row" }}
-        //flexDir="column"
+        maxW={1000}
+        flexDir={{ base: "column", md: "row" }}
       >
-        <Heading>Texto</Heading>
-        <Heading>Texto</Heading>
+        <VStack spacing={0} align="start" flex={1}>
+          <Text fontSize={24}>O Tion cobra tarifa</Text>
+          <Text lineHeight={0.7} bgGradient="linear(to-r, pessego, gradient2)" bgClip="text" fontWeight="bold" fontSize={{base:120, md:200}}>zero</Text>
+          <Text fontSize={{base:45, md:75}}>por corrida</Text>
+          <Text py={8}>Você paga somente uma taxa de R$ 00,00 para uso do aplicativo mensalmente.</Text>
+          <Botao url="#" text="Seja um motorista" w="full" />
+        </VStack>
+          <Image quality={100} width={678} height={773} src="/tion1.png" alt="Prévia do app em smartphones"></Image>
       </Flex>
     </Flex>
   );

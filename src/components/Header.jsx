@@ -26,6 +26,7 @@ import {
 } from "../icons";
 import { Botao } from "./Botao";
 import { useRouter } from "next/dist/client/router";
+import { SocialIcons } from "./SocialIcons";
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -99,7 +100,8 @@ const Menu = () => (
 function MenuLink(props) {
   const router = useRouter();
   return (
-    <Text style={{transition:'all 200ms'}}
+    <Text
+      style={{ transition: "all 200ms" }}
       fontFamily="Space Grotesk"
       fontWeight="700"
       borderBottomWidth={6}
@@ -136,10 +138,6 @@ const MenuSuperior = () => (
         <Text>Seg-Sáb: 7h às 18h</Text>
       </HStack>
     </Flex>
-    <HStack>
-      <FaceSvg />
-      <WhatsSvg />
-      <InstaSvg />
-    </HStack>
+    <SocialIcons />
   </>
 );

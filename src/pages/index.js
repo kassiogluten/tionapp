@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Cadastro } from "../components/Cadastro";
 import { EscolhaCategoria } from "../components/EscolaCategoria";
+import { Footer } from "../components/Footer";
 import { FooterCTA } from "../components/FooterCTA";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
@@ -22,6 +23,7 @@ export default function Home() {
       <NossasVantagens />
       <Cadastro />
       <FooterCTA/>
+      <Footer/>
     </>
   );
 }

@@ -11,6 +11,7 @@ export const Botao = (props) => (
     borderRadius={0}
     color="branco"
     w={props.w || 'inherit'}
+    href={props.url}
   >
     {props.text}
   </Button>

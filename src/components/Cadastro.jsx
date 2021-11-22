@@ -48,6 +48,7 @@ export function Cadastro() {
     });
     
     setIsLoading(false)
+    reset()
     
   }
   
@@ -57,9 +58,9 @@ export function Cadastro() {
 
   
   return (
-    <Flex p={4} as="section" justify="center" align="center" w="100%">
+    <Flex id="cadastre" p={4} as="section" justify="center" align="center" w="100%">
       <Flex
-        py={{ base: "1rem", md: "5rem" }}
+        py={{ base: "4rem", md: "5rem" }}
         maxW={600}
         flexDir="column"
         flex={1}

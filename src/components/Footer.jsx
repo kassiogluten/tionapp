@@ -1,6 +1,21 @@
 import { DownloadIcon } from "@chakra-ui/icons";
-import { Flex, Text, Heading, Wrap, VStack, HStack, Box, Stack } from "@chakra-ui/react";
-import { HeartSvg, LogoBrancaSvg, PaymentSvg, PriceSvg, SupportSvg } from "../icons";
+import {
+  Flex,
+  Text,
+  Heading,
+  Wrap,
+  VStack,
+  HStack,
+  Box,
+  Stack,
+} from "@chakra-ui/react";
+import {
+  HeartSvg,
+  LogoBrancaSvg,
+  PaymentSvg,
+  PriceSvg,
+  SupportSvg,
+} from "../icons";
 import { DownloadApp } from "./DownloadApp";
 import { SocialIcons } from "./SocialIcons";
 
@@ -26,25 +41,37 @@ export function Footer() {
           </Text>
           <Text>CNPJ: 41.466.581/0001-39</Text>
         </VStack>
-        <Wrap flex={3} justify="flex-end" spacing={4}>
+        <Wrap pt={{base:8, md:0}} flex={3} justify={{ base: "center", md: "flex-end" }} spacing={4}>
           <LinkSection
-            titulo="Preço justo"
+            titulo="Empresa"
             descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
-            icon={<PriceSvg />}
-          />
+          >
+            <Text>Quem somos</Text>
+            <Text>Nossos produtos</Text>
+            <Text>Novidades e eventos</Text>
+          </LinkSection>
           <LinkSection
-            titulo="Pagamentos"
+            titulo="Passageiro"
             descricao="Dirigiu e caiu direto na em sua conta. Nada de burocracia ou taxas."
-            icon={<PaymentSvg />}
-          />
+          >
+            <Text>Como funciona</Text>
+            <Text>Tarifas</Text>
+            <Text>Promoções e cupons</Text>
+            <Text>Segurança e privacidade</Text>
+            <Text>Atendimento e suporte</Text>
+            <Text>Pergunta frequetes</Text>
+          </LinkSection>
           <LinkSection
-            titulo="Suporte"
+            titulo="Motorista"
             descricao="Entre em contato conosco para resolver qualquer problema, de forma rápida e eficiênte."
-            icon={<SupportSvg />}
-          />
+          >
+            <Text>Como funciona</Text>
+            <Text>Seja um parceiro</Text>
+            <Text>Atendimento e suporte</Text>
+          </LinkSection>
         </Wrap>
       </Flex>
-      <Flex
+      <Flex align="center"
         p="2rem 1rem"
         maxW={1200}
         flexDir={{ base: "column", md: "row" }}
@@ -57,20 +84,33 @@ export function Footer() {
             MG, 35302-612
           </Text>
         </Box>
-        <DownloadApp align="end" />
+        <DownloadApp align={{base:"center", md:"end"}} />
       </Flex>
-      <Flex
-        p="1rem 1rem 8rem"
+      <Flex align="center"
+        overflowX="hidden"
+        p="2rem 1rem"
         maxW={1200}
         flexDir={{ base: "column", md: "row" }}
         w="full"
         justify="space-between"
+        _after={{
+          content: "''",
+          width: "50vw",
+          height: "5px",
+          bg: "pessego",
+          position: "absolute",
+          bottom: 0,
+          left: { base: 10, lg: 300 },
+        }}
       >
         <SocialIcons />
-        <Wrap fontSize={14}>
+        <Wrap pt={4} fontSize={14}>
           <Text>Feito com</Text>
-          <HeartSvg/>
-          <Text> por <strong>Suricato Agência</strong></Text>
+          <HeartSvg />
+          <Text>
+            {" "}
+            por <strong>Suricato Agência</strong>
+          </Text>
         </Wrap>
       </Flex>
     </Flex>
@@ -87,6 +127,8 @@ const LinkSection = (props) => (
         {props.titulo}
       </Heading>
     </HStack>
-    <Text>{props.descricao}</Text>
+    <Box sx={{ p: { py: 1 } }} my={16}>
+      {props.children}
+    </Box>
   </VStack>
 );

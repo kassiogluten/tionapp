@@ -11,19 +11,15 @@ import {
   DrawerCloseButton,
   useDisclosure,
   VStack,
+  Link,
 } from "@chakra-ui/react";
 
 import { FaThList } from "react-icons/fa";
 import React from "react";
-import {
-  ClockSvg,
-  FaceSvg,
-  InstaSvg,
-  LogoSvg,
-  MailSvg,
-  TelSvg,
-  WhatsSvg,
-} from "../icons";
+import { ClockSvg, LogoSvg, MailSvg, TelSvg } from "../icons";
+
+// import Link from "next/link";
+
 import { Botao } from "./Botao";
 import { useRouter } from "next/dist/client/router";
 import { SocialIcons } from "./SocialIcons";
@@ -93,7 +89,7 @@ const Menu = () => (
     <MenuLink text="Início" url="/" />
     <MenuLink text="Empresa" url="/empresa" />
     <MenuLink text="Suporte e ajuda" url="/suporte" />
-    <Botao text="Seja um motorista" />
+    <a href="#cadastre"><Botao url="#cadastre" text="Seja um motorista" /></a>
   </>
 );
 
@@ -105,8 +101,8 @@ function MenuLink(props) {
       fontFamily="Space Grotesk"
       fontWeight="700"
       borderBottomWidth={6}
-      borderColor={router.asPath === props.url ? "pessego" : "branca"}
-      color={router.asPath === props.url ? "pessego" : "branca"}
+      borderColor={router.pathname === props.url ? "pessego" : "branca"}
+      color={router.pathname === props.url ? "pessego" : "branca"}
       _hover={{ borderColor: "pessego", color: "pessego" }}
       p={{ base: "1rem", md: "2.5rem 2rem" }}
       as="a"
@@ -125,14 +121,18 @@ const MenuSuperior = () => (
       maxW="650px"
       flexDir={{ base: "column", md: "row" }}
     >
-      <HStack>
-        <TelSvg />
-        <Text>(33) 99912-3456</Text>
-      </HStack>
-      <HStack>
-        <MailSvg />
-        <Text>contato@tionapp.com.br</Text>
-      </HStack>
+      <Link as="a" href="tel: (33) 99912-3456">
+        <HStack>
+          <TelSvg />
+          <Text>(33) 99912-3456</Text>
+        </HStack>
+      </Link>
+      <Link as="a" href="mailto:contato@tionapp.com.br">
+        <HStack>
+          <MailSvg />
+          <Text>contato@tionapp.com.br</Text>
+        </HStack>
+      </Link>
       <HStack>
         <ClockSvg />
         <Text>Seg-Sáb: 7h às 18h</Text>

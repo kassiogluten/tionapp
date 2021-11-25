@@ -12,13 +12,9 @@ import { Botao } from "./Botao";
 
 import { useForm } from "react-hook-form";
 
-
 import { useState } from "react";
 
-
 export function Cadastro() {
-
-  
   const {
     register,
     trigger,
@@ -27,18 +23,18 @@ export function Cadastro() {
     watch,
     formState: { errors, isValid },
   } = useForm({ mode: "all" });
-  
+
   async function submitHandler(data) {
     setIsLoading(true);
 
-    await fetch('/api/sheets', {
-      method: 'POST',
+    await fetch("/api/sheets", {
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
-    
+
     toast({
       title: "Enviado !",
       description: `Olá ${Nome}, recebemos seus dados, entraremos em contato no número ${Telefone} para finalizar seu cadastro e agendar a vistoria.`,
@@ -46,19 +42,24 @@ export function Cadastro() {
       isClosable: true,
       position: "bottom",
     });
-    
-    setIsLoading(false)
-    reset()
-    
+
+    setIsLoading(false);
+    reset();
   }
-  
+
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
   const { Nome, Telefone } = watch();
 
-  
   return (
-    <Flex id="cadastre" p={4} as="section" justify="center" align="center" w="100%">
+    <Flex
+      id="cadastre"
+      p={4}
+      as="section"
+      justify="center"
+      align="center"
+      w="100%"
+    >
       <Flex
         py={{ base: "4rem", md: "5rem" }}
         maxW={600}
@@ -70,8 +71,8 @@ export function Cadastro() {
         <Heading textAlign="center" fontWeight="bold" fontSize={24}>
           Faça o pré-cadastro
         </Heading>
-        <VStack w="full" py={8} align="start">
-          <FormLabel htmlFor="Nome">Nome</FormLabel>
+        
+          {/* <FormLabel htmlFor="Nome">Nome</FormLabel>
           <Input
             borderRadius={0}
             bg="branco"
@@ -83,41 +84,57 @@ export function Cadastro() {
             type="text"
             {...register("Nome", { required: true })}
           />
-          {errors.Nome && <Text color="red">Nome obrigatório!</Text>}
-          <FormLabel pt={4} htmlFor="Email">
-            Email
-          </FormLabel>
-          <Input
-            borderRadius={0}
-            bg="branco"
-            color="gray.800"
+          {errors.Nome && <Text color="red">Nome obrigatório!</Text>} */}
+          <Campo
+            required
+            register={register}
+            errors={errors}
+            id="Nome"
+            label="Nome"
+            placeholder="Qual seu nome ?"
+          />
+          <Campo
+            required
+            register={register}
+            errors={errors}
             id="Email"
-            borderColor={errors.Email ? "red" : "white"}
-            p="25px"
-            placeholder="E-mail"
-            type="text"
-            {...register("Email", { required: true })}
+            label="E-mail"
+            placeholder="Qual seu e-mail ?"
           />
-          {errors.Email && <Text color="red">Email obrigatório!</Text>}
-          <FormLabel pt={4} htmlFor="Telefone">
-            Telefone
-          </FormLabel>
-          <Input
-            borderRadius={0}
-            bg="branco"
-            color="gray.800"
+          <Campo
+            required
+            register={register}
+            errors={errors}
             id="Telefone"
-            borderColor={errors.Telefone ? "red" : "white"}
-            p="25px"
-            placeholder="Telefone"
-            type="text"
-            {...register("Telefone", { required: true })}
+            label="Telefone"
+            placeholder="Qual seu telefone ?"
           />
-          {errors.Telefone && <Text color="red">Telefone obrigatório!</Text>}
-        </VStack>
+          <Campo
+            required
+            register={register}
+            errors={errors}
+            id="Idade"
+            label="Sua Idade"
+            placeholder="Qual sua idade ?"
+          />
+          <Campo
+            register={register}
+            errors={errors}
+            id="Veiculo"
+            label="Modelo do veículo"
+            placeholder="Qual modelo de seu veículo ?"
+          />
+          <Campo
+            register={register}
+            errors={errors}
+            id="Ano"
+            label="Ano do veículo"
+            placeholder="Qual ano do veículo ?"
+          />
+        
         {!isValid ? (
           <Botao
-            mt={4}
+            mt={8}
             sx={{ cursor: "not-allowed" }}
             opacity=".3"
             bg="pessego"
@@ -132,7 +149,7 @@ export function Cadastro() {
           />
         ) : (
           <Botao
-            mt={4}
+            mt={8}
             _loading={{ color: "white" }}
             isLoading={isLoading}
             h="56px"
@@ -146,5 +163,27 @@ export function Cadastro() {
         )}
       </Flex>
     </Flex>
+  );
+}
+
+function Campo(props) {
+  return (
+    <VStack w="100%" align="start">
+      <FormLabel mb={0} mt={8} htmlFor={props.id}>
+        {props.label} {props.errors[props.id] && <Text display="inline" color="red">(Campo obrigatório!)</Text>}
+      </FormLabel>
+      <Input
+        _placeholder={{ color: "gray.300", fontSize: 14 }}
+        borderRadius={0}
+        bg="branco"
+        color="gray.800"
+        id={props.id}
+        borderColor={props.errors[props.id] ? "red" : "white"}
+        p="25px"
+        placeholder={props.placeholder}
+        type="text"
+        {...props.register(props.id, { required: props.required })}
+      />
+    </VStack>
   );
 }

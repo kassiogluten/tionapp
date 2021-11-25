@@ -2,7 +2,7 @@ import { google } from "googleapis";
 
 async function handler(req, res) {
   if (req.method === "POST") {
-    const { Nome, Email, Telefone } = req.body;
+    const { Nome, Email, Telefone, Idade, Veiculo, Ano } = req.body;
     // console.log(name, message);
 
     const auth = new google.auth.GoogleAuth({
@@ -33,6 +33,9 @@ async function handler(req, res) {
             Nome,
             Email,
             Telefone,
+            Idade,
+            Veiculo,
+            Ano,
             new Date().toLocaleString("pt-BR", {
               timeZone: "America/Sao_Paulo",
             }),

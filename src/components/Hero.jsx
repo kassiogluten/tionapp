@@ -25,7 +25,7 @@ export function Hero() {
           </Text>
           <Text fontSize={{ base: 45, md: 75 }}>por corrida</Text>
           <Text py={8}>
-            Você paga somente uma taxa de R$ 00,00 para uso do aplicativo
+            Você paga somente uma taxa de R$ 150,00 para uso do aplicativo
             mensalmente.
           </Text>
           <Botao as="a" url="#cadastre" text="Seja um motorista" w="full" />

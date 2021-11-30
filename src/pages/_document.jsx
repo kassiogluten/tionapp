@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Epilogue&family=Roboto:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Roboto:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap"
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.jpg" type="image/jpg" />

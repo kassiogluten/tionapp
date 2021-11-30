@@ -18,14 +18,15 @@ export function Hero() {
             lineHeight={0.7}
             bgGradient="linear(to-r, pessego, gradient2)"
             bgClip="text"
-            fontWeight="bold"
-            fontSize={{ base: 120, md: 200 }}
+            fontWeight="800"
+            fontSize={{ base: 100, md: 190 }}
           >
             zero
           </Text>
           <Text fontSize={{ base: 45, md: 75 }}>por corrida</Text>
+         
           <Text py={8}>
-            Você paga somente uma taxa de R$ 150,00 para uso do aplicativo
+            Após seu período de testes (30 dias gratuitamente), você paga somente uma taxa de R$ 150,00 para uso do aplicativo
             mensalmente.
           </Text>
           <Botao as="a" url="#cadastre" text="Seja um motorista" w="full" />

@@ -18,6 +18,14 @@ export const theme = extendTheme({
     Button: {
       baseStyle: {
         _hover: {
+          textDecoration: "underline",
+        },
+      },
+    },
+    AccordionButton: {
+      baseStyle: {
+        _focus: {
+          outlineColor:'pessego'
           //textDecoration: "underline",
         },
       },

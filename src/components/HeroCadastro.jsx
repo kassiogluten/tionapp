@@ -3,7 +3,7 @@ import { Botao } from "./Botao";
 
 // import Image from "next/image";
 
-export function Hero() {
+export function HeroCadastro() {
   return (
     <Flex as="section" justify="center" align="center" w="100%">
       <Flex

@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { Cadastro } from "../components/Cadastro";
-import { EscolhaCategoria } from "../components/EscolaCategoria";
+import { EscolhaCategoria } from "../components/EscolhaCategoria";
 import { Footer } from "../components/Footer";
 import { FooterCTA } from "../components/FooterCTA";
 import { Header } from "../components/Header";
-import { Hero } from "../components/Hero";
+import { HeroCadastro } from "../components/HeroCadastro";
 import { NossasVantagens } from "../components/NossasVantagens";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <meta property="og:image" content="/logo.jpg" key="ogimage" />
       </Head>
       <Header />
-      <Hero />
+      <HeroCadastro />
       <EscolhaCategoria />
       <NossasVantagens />
       <Cadastro />

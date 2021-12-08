@@ -2847,6 +2847,558 @@ export const HeartSvg = () => (
     </defs>
   </svg>
 );
+export const CadeadoSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#001A34" />
+    <path
+      d="M34.25 26.75H21.75C20.3693 26.75 19.25 27.8693 19.25 29.25V36.75C19.25 38.1307 20.3693 39.25 21.75 39.25H34.25C35.6307 39.25 36.75 38.1307 36.75 36.75V29.25C36.75 27.8693 35.6307 26.75 34.25 26.75Z"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28 34.25C28.6904 34.25 29.25 33.6904 29.25 33C29.25 32.3096 28.6904 31.75 28 31.75C27.3096 31.75 26.75 32.3096 26.75 33C26.75 33.6904 27.3096 34.25 28 34.25Z"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M23 26.75V21.75C23 20.4239 23.5268 19.1521 24.4645 18.2145C25.4021 17.2768 26.6739 16.75 28 16.75C29.3261 16.75 30.5979 17.2768 31.5355 18.2145C32.4732 19.1521 33 20.4239 33 21.75V26.75"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const VelocidadeSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#001A34" />
+    <path
+      d="M28 39.25C34.2132 39.25 39.25 34.2132 39.25 28C39.25 21.7868 34.2132 16.75 28 16.75C21.7868 16.75 16.75 21.7868 16.75 28C16.75 34.2132 21.7868 39.25 28 39.25Z"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28 29.25C28.6904 29.25 29.25 28.6904 29.25 28C29.25 27.3096 28.6904 26.75 28 26.75C27.3096 26.75 26.75 27.3096 26.75 28C26.75 28.6904 27.3096 29.25 28 29.25Z"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M29.7627 26.2375L33.0002 23"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M21.75 28C21.75 26.3424 22.4085 24.7527 23.5806 23.5806C24.7527 22.4085 26.3424 21.75 28 21.75"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const LikeSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#001A34" />
+    <path
+      d="M16.7495 25.1875H22.3745V37.375H16.7495C16.5009 37.375 16.2624 37.2762 16.0866 37.1004C15.9108 36.9246 15.812 36.6861 15.812 36.4375V26.125C15.812 25.8764 15.9108 25.6379 16.0866 25.4621C16.2624 25.2863 16.5009 25.1875 16.7495 25.1875V25.1875Z"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M22.3745 25.1875L27.062 15.8125C27.5545 15.8125 28.0421 15.9095 28.4971 16.098C28.952 16.2864 29.3654 16.5626 29.7137 16.9108C30.0619 17.2591 30.3381 17.6725 30.5266 18.1274C30.715 18.5824 30.812 19.07 30.812 19.5625V22.375H38.063C38.3289 22.375 38.5917 22.4315 38.8341 22.5409C39.0764 22.6502 39.2927 22.8098 39.4687 23.0091C39.6446 23.2084 39.7762 23.4429 39.8546 23.6969C39.933 23.9509 39.9565 24.2188 39.9236 24.4826L38.5173 35.7326C38.4606 36.186 38.2403 36.6032 37.8977 36.9056C37.5551 37.2081 37.1138 37.375 36.6568 37.375H22.3745"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const FinanceiraSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#001A34" />
+    <path
+      d="M28 15.8125V40.1875"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M34.5625 23.3125C34.5625 22.6969 34.4413 22.0874 34.2057 21.5187C33.9701 20.95 33.6248 20.4332 33.1896 19.9979C32.7543 19.5627 32.2375 19.2174 31.6688 18.9818C31.1001 18.7462 30.4906 18.625 29.875 18.625H25.6562C24.413 18.625 23.2208 19.1189 22.3417 19.9979C21.4626 20.877 20.9688 22.0693 20.9688 23.3125C20.9688 24.5557 21.4626 25.748 22.3417 26.6271C23.2208 27.5061 24.413 28 25.6562 28H30.8125C32.0557 28 33.248 28.4939 34.1271 29.3729C35.0061 30.252 35.5 31.4443 35.5 32.6875C35.5 33.9307 35.0061 35.123 34.1271 36.0021C33.248 36.8811 32.0557 37.375 30.8125 37.375H25.1875C23.9443 37.375 22.752 36.8811 21.8729 36.0021C20.9939 35.123 20.5 33.9307 20.5 32.6875"
+      stroke="#001A34"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const HowToDownloadSvg = () => (
+  <svg
+    width="42"
+    height="42"
+    viewBox="0 0 42 42"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 29.7502V33.2502C7 34.1785 7.36875 35.0687 8.02513 35.7251C8.6815 36.3815 9.57174 36.7502 10.5 36.7502H31.5C32.4283 36.7502 33.3185 36.3815 33.9749 35.7251C34.6313 35.0687 35 34.1785 35 33.2502V29.7502"
+      stroke="url(#paint0_linear_253_324)"
+      strokeWidth="2.625"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12.25 19.2502L21 28.0002L29.75 19.2502"
+      stroke="url(#paint1_linear_253_324)"
+      strokeWidth="2.625"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M21 7.00024V28.0002"
+      stroke="url(#paint2_linear_253_324)"
+      strokeWidth="2.625"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_253_324"
+        x1="7"
+        y1="33.2502"
+        x2="35"
+        y2="33.2502"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_253_324"
+        x1="12.25"
+        y1="23.6252"
+        x2="29.75"
+        y2="23.6252"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_253_324"
+        x1="21"
+        y1="17.5002"
+        x2="22"
+        y2="17.5002"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export const CarteiraSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      opacity="0.1"
+      width="56"
+      height="56"
+      fill="url(#paint0_linear_254_566)"
+    />
+    <path
+      d="M17.6875 20.5V35.5C17.6875 35.9973 17.885 36.4742 18.2367 36.8258C18.5883 37.1775 19.0652 37.375 19.5625 37.375H38.3125C38.5611 37.375 38.7996 37.2762 38.9754 37.1004C39.1512 36.9246 39.25 36.6861 39.25 36.4375V23.3125C39.25 23.0639 39.1512 22.8254 38.9754 22.6496C38.7996 22.4738 38.5611 22.375 38.3125 22.375H19.5625C19.0652 22.375 18.5883 22.1775 18.2367 21.8258C17.885 21.4742 17.6875 20.9973 17.6875 20.5ZM17.6875 20.5C17.6875 20.0027 17.885 19.5258 18.2367 19.1742C18.5883 18.8225 19.0652 18.625 19.5625 18.625H35.5"
+      stroke="url(#paint1_linear_254_566)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M34.0938 31.2812C34.8704 31.2812 35.5 30.6517 35.5 29.875C35.5 29.0983 34.8704 28.4688 34.0938 28.4688C33.3171 28.4688 32.6875 29.0983 32.6875 29.875C32.6875 30.6517 33.3171 31.2812 34.0938 31.2812Z"
+      fill="url(#paint2_linear_254_566)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_254_566"
+        x1="0"
+        y1="28"
+        x2="56"
+        y2="28"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_254_566"
+        x1="17.6875"
+        y1="28"
+        x2="39.25"
+        y2="28"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_254_566"
+        x1="32.6875"
+        y1="29.875"
+        x2="35.5"
+        y2="29.875"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export const CarSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      opacity="0.1"
+      width="56"
+      height="56"
+      fill="url(#paint0_linear_836_5965)"
+    />
+    <path
+      d="M14.875 27.0625H41.125"
+      stroke="url(#paint1_linear_836_5965)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M39.25 34.5625V37.375C39.25 37.6236 39.1512 37.8621 38.9754 38.0379C38.7996 38.2137 38.5611 38.3125 38.3125 38.3125H35.5C35.2514 38.3125 35.0129 38.2137 34.8371 38.0379C34.6613 37.8621 34.5625 37.6236 34.5625 37.375V34.5625"
+      stroke="url(#paint2_linear_836_5965)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M21.4375 34.5625V37.375C21.4375 37.6236 21.3387 37.8621 21.1629 38.0379C20.9871 38.2137 20.7486 38.3125 20.5 38.3125H17.6875C17.4389 38.3125 17.2004 38.2137 17.0246 38.0379C16.8488 37.8621 16.75 37.6236 16.75 37.375V34.5625"
+      stroke="url(#paint3_linear_836_5965)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M20.5 30.8125H22.375"
+      stroke="url(#paint4_linear_836_5965)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M33.625 30.8125H35.5"
+      stroke="url(#paint5_linear_836_5965)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M39.25 27.0625L35.7474 19.1817C35.6738 19.016 35.5537 18.8752 35.4016 18.7764C35.2495 18.6776 35.0721 18.625 34.8907 18.625H21.1093C20.9279 18.625 20.7505 18.6776 20.5984 18.7764C20.4463 18.8752 20.3262 19.016 20.2526 19.1817L16.75 27.0625V34.5625H39.25V27.0625Z"
+      stroke="url(#paint6_linear_836_5965)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_836_5965"
+        x1="0"
+        y1="28"
+        x2="56"
+        y2="28"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_836_5965"
+        x1="14.875"
+        y1="27.5625"
+        x2="41.125"
+        y2="27.5625"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_836_5965"
+        x1="34.5625"
+        y1="36.4375"
+        x2="39.25"
+        y2="36.4375"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint3_linear_836_5965"
+        x1="16.75"
+        y1="36.4375"
+        x2="21.4375"
+        y2="36.4375"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint4_linear_836_5965"
+        x1="20.5"
+        y1="31.3125"
+        x2="22.375"
+        y2="31.3125"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint5_linear_836_5965"
+        x1="33.625"
+        y1="31.3125"
+        x2="35.5"
+        y2="31.3125"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint6_linear_836_5965"
+        x1="16.75"
+        y1="26.5937"
+        x2="39.25"
+        y2="26.5937"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export const Like2Svg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      opacity="0.1"
+      width="56"
+      height="56"
+      fill="url(#paint0_linear_302_804)"
+    />
+    <path
+      d="M16.75 25.1875H22.375V37.375H16.75C16.5014 37.375 16.2629 37.2762 16.0871 37.1004C15.9113 36.9246 15.8125 36.6861 15.8125 36.4375V26.125C15.8125 25.8764 15.9113 25.6379 16.0871 25.4621C16.2629 25.2863 16.5014 25.1875 16.75 25.1875V25.1875Z"
+      stroke="url(#paint1_linear_302_804)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M22.375 25.1875L27.0625 15.8125C27.555 15.8125 28.0426 15.9095 28.4976 16.098C28.9525 16.2864 29.3659 16.5626 29.7141 16.9108C30.0624 17.2591 30.3386 17.6725 30.527 18.1274C30.7155 18.5824 30.8125 19.07 30.8125 19.5625V22.375H38.0635C38.3294 22.375 38.5922 22.4315 38.8346 22.5409C39.0769 22.6502 39.2932 22.8098 39.4692 23.0091C39.6451 23.2084 39.7767 23.4429 39.8551 23.6969C39.9335 23.9509 39.957 24.2188 39.9241 24.4826L38.5178 35.7326C38.4611 36.186 38.2408 36.6032 37.8982 36.9056C37.5556 37.2081 37.1143 37.375 36.6573 37.375H22.375"
+      stroke="url(#paint2_linear_302_804)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_302_804"
+        x1="0"
+        y1="28"
+        x2="56"
+        y2="28"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_302_804"
+        x1="15.8125"
+        y1="31.2812"
+        x2="22.375"
+        y2="31.2812"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_302_804"
+        x1="22.375"
+        y1="26.5937"
+        x2="39.9385"
+        y2="26.5937"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export const BlogSvg = () => (
+  <svg
+    width="72"
+    height="72"
+    viewBox="0 0 72 72"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      opacity="0.1"
+      width="72"
+      height="72"
+      fill="url(#paint0_linear_840_5966)"
+    />
+    <path
+      d="M49.9062 24.3125H23.0938C22.4207 24.3125 21.875 24.8582 21.875 25.5312V47.4688C21.875 48.1418 22.4207 48.6875 23.0938 48.6875H49.9062C50.5793 48.6875 51.125 48.1418 51.125 47.4688V25.5312C51.125 24.8582 50.5793 24.3125 49.9062 24.3125Z"
+      stroke="url(#paint1_linear_840_5966)"
+      strokeWidth="2.4375"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28.5781 31.625H44.4219"
+      stroke="url(#paint2_linear_840_5966)"
+      strokeWidth="2.4375"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28.5781 36.5H44.4219"
+      stroke="url(#paint3_linear_840_5966)"
+      strokeWidth="2.4375"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28.5781 41.375H44.4219"
+      stroke="url(#paint4_linear_840_5966)"
+      strokeWidth="2.4375"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_840_5966"
+        x1="0"
+        y1="36"
+        x2="72"
+        y2="36"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_840_5966"
+        x1="21.875"
+        y1="36.5"
+        x2="51.125"
+        y2="36.5"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_840_5966"
+        x1="28.5781"
+        y1="32.125"
+        x2="44.4219"
+        y2="32.125"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint3_linear_840_5966"
+        x1="28.5781"
+        y1="37"
+        x2="44.4219"
+        y2="37"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint4_linear_840_5966"
+        x1="28.5781"
+        y1="41.875"
+        x2="44.4219"
+        y2="41.875"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
 /* export const LogoSvg = () => (
   
   

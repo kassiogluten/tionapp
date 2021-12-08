@@ -1,12 +1,12 @@
 html,
 body {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
 }
 
-body{
-  background: url(/bg-header.jpg) no-repeat center top, #001A34 !important;
+body {
+  background: url(/bg-header.jpg) no-repeat center top, #001a34 !important;
 }
 
 a {

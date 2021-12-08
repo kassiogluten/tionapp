@@ -7,7 +7,6 @@ import {
   useToast,
   FormLabel,
 } from "@chakra-ui/react";
-import { PaymentSvg, PriceSvg, SupportSvg } from "../icons";
 import { Botao } from "./Botao";
 
 import { useForm } from "react-hook-form";

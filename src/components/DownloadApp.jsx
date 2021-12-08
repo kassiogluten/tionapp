@@ -6,7 +6,7 @@ import {
 
 export function DownloadApp(props) {
   return (
-    <Wrap py={{base:8, md:0}} flex={1} justify={props.align || "center"} alignSelf="center" spacing={4}>
+    <Wrap w={'full'} py={{base:4, md:props.py || 0}} flex={1} justify={props.align || "center"} alignSelf="center" spacing={4}>
       <Image
         width={174}
         height={55}

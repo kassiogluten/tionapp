@@ -1,4 +1,3 @@
-import { DownloadIcon } from "@chakra-ui/icons";
 import {
   Flex,
   Text,
@@ -7,15 +6,8 @@ import {
   VStack,
   HStack,
   Box,
-  Stack,
 } from "@chakra-ui/react";
-import {
-  HeartSvg,
-  LogoBrancaSvg,
-  PaymentSvg,
-  PriceSvg,
-  SupportSvg,
-} from "../icons";
+import { HeartSvg, LogoBrancaSvg } from "../icons";
 import { DownloadApp } from "./DownloadApp";
 import { SocialIcons } from "./SocialIcons";
 
@@ -41,7 +33,12 @@ export function Footer() {
           </Text>
           <Text>CNPJ: 41.466.581/0001-39</Text>
         </VStack>
-        <Wrap pt={{base:8, md:0}} flex={3} justify={{ base: "center", md: "flex-end" }} spacing={4}>
+        <Wrap
+          pt={{ base: 8, md: 0 }}
+          flex={3}
+          justify={{ base: "center", md: "flex-end" }}
+          spacing={4}
+        >
           <LinkSection
             titulo="Empresa"
             descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
@@ -71,7 +68,8 @@ export function Footer() {
           </LinkSection>
         </Wrap>
       </Flex>
-      <Flex align="center"
+      <Flex
+        align="center"
         p="2rem 1rem"
         maxW={1200}
         flexDir={{ base: "column", md: "row" }}
@@ -84,23 +82,28 @@ export function Footer() {
             MG, 35302-612
           </Text>
         </Box>
-        <DownloadApp align={{base:"center", md:"end"}} />
+        <DownloadApp align={{ base: "center", md: "end" }} />
       </Flex>
-      <Flex align="center"
+      <Flex
+        align="center"
         overflowX="hidden"
         p="2rem 1rem"
         maxW={1200}
         flexDir={{ base: "column", md: "row" }}
         w="full"
         justify="space-between"
+        position="relative"
         _after={{
           content: "''",
-          width: "50vw",
+          width: { base: "75vw", md: "45vw", xl:600 },
           height: "5px",
           bg: "pessego",
           position: "absolute",
           bottom: 0,
-          left: { base: 10, lg: 300 },
+          right: 0,
+          left: 0,
+          marginX: "auto",
+          // left: { base: 10, lg: '20%' },
         }}
       >
         <SocialIcons />

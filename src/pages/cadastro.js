@@ -22,7 +22,7 @@ export default function Home() {
       <EscolhaCategoria />
       <NossasVantagens />
       <Cadastro />
-      <FooterCTA/>
+      <FooterCTA title="Se preferir, cadastre-se diretamente pelo app." desc="Baixe nosso app e comece a faturar agora mesmo."/>
       <Footer/>
     </>
   );

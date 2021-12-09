@@ -13,7 +13,7 @@ import { SocialIcons } from "./SocialIcons";
 
 export function Footer() {
   return (
-    <Flex
+    <Flex zIndex={90} bg="azul" pos="relative"
       flexDir="column"
       align="center"
       as="section"
@@ -39,7 +39,7 @@ export function Footer() {
           justify={{ base: "center", md: "flex-end" }}
           spacing={4}
         >
-          <LinkSection
+          <LinkSection 
             titulo="Empresa"
             descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
           >
@@ -120,7 +120,7 @@ export function Footer() {
   );
 }
 
-const LinkSection = (props) => (
+export const LinkSection = (props) => (
   <VStack justifySelf="center" p={4} align="flex-start" maxW={250}>
     <HStack pb={4}>
       <Heading

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { Cadastro } from "../components/Cadastro";
-import { EscolhaCategoria } from "../components/EscolhaCategoria";
 import { Footer } from "../components/Footer";
 import { FooterCTA } from "../components/FooterCTA";
 import { Header } from "../components/Header";
@@ -12,8 +10,6 @@ import { HowTo } from "../components/Home/HowTo";
 import { Revolution } from "../components/Home/Revolution";
 import { SobreOApp } from "../components/Home/SobreOApp";
 import { VantagensPassageiro } from "../components/Home/VantagensPassageiro";
-import { KSwiper } from "../components/KSwiper";
-import { NossasVantagens } from "../components/NossasVantagens";
 
 
 export default function Home() {
@@ -35,7 +31,7 @@ export default function Home() {
       <HowTo/>
       <Cards/>
       <Blog/>
-      <FooterCTA/>
+      <FooterCTA img="/phone.png"/>
       <Footer/>
     </>
   );

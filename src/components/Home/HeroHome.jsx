@@ -4,9 +4,9 @@ import { DownloadApp } from "../DownloadApp";
 
 export function HeroHome() {
   return (
-    <Flex as="section" justify="center" align="center" w="100%">
+    <Flex pt={150} as="section" justify="center" align="center" w="100%">
       <Flex
-        p="5rem 1rem"
+        p="5rem 1rem 1rem"
         align="center"
         justify="space-around"
         maxW={1000}
@@ -30,10 +30,11 @@ export function HeroHome() {
           <DownloadApp align="start" py={4} />
           <Botao as="a" url="/cadastro" text="Seja um motorista" w="full" />
         </VStack>
-        <Flex
+        <Flex transform="translateY(3rem)" 
           zIndex={-1}
           flex={1}
-          position={{ base: "absolute", md: "relative" }}
+          position={{ base: "absolute", md: "unset" }}
+          justify="flex-end"
         >
           <Box
             bottom={0}
@@ -43,7 +44,7 @@ export function HeroHome() {
             pos="absolute"
             bgGradient="linear(to-t, azul 5%, transparent 40%) "
           />
-          <Image
+          <Image w="full"
             src="/hero1.png"
             alt="Modelo segurando celular com o aplicativo"
           />

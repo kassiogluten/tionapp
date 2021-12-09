@@ -5,7 +5,7 @@ import { Botao } from "./Botao";
 
 export function HeroCadastro() {
   return (
-    <Flex as="section" justify="center" align="center" w="100%">
+    <Flex pt={100} as="section" justify="center" align="center" w="100%">
       <Flex
         p="5rem 1rem"
         align="center"

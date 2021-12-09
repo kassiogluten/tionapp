@@ -8,21 +8,22 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-// import Image from "next/image";
 import { CityFooterSvg } from "../icons";
 import { DownloadApp } from "./DownloadApp";
 
-export function FooterCTA() {
+export function FooterCTA({
+  title = "Para onde vamos?",
+  desc = "Baixe nosso app e comece a viajar agora mesmo.",
+  img,
+}) {
   return (
     <Flex
-      position="relative"
-      overflowX="hidden"
       as="section"
       justify="center"
       align="center"
       w="100%"
       py={{ base: 12, md: 24 }}
-      bgGradient="linear(to-r, pessego, gradient2)"
+      background="url(/footer-bg.svg) no-repeat bottom, linear-gradient(to right, #FF4655, #F37053)"
     >
       <Flex
         p="2rem"
@@ -38,15 +39,24 @@ export function FooterCTA() {
             fontSize={42}
             fontWeight="bold"
           >
-            Se preferir, cadastre-se diretamente pelo app.
+            {title}
           </Heading>
-          <Text>Baixe nosso app e comece a faturar agora mesmo.</Text>
+          <Text>{desc}</Text>
         </VStack>
         <DownloadApp />
       </Flex>
-      <Box position="absolute" bottom={0} left={0}>
-        <CityFooterSvg />
-      </Box>
+      {img && (
+        <Image 
+          display={{ base: "none", lg: "block" }}
+          pos="absolute"
+          mx="auto"
+          transform="translateY(-5px)"
+          zIndex={1}
+          maxW={223}
+          src={img}
+          alt="iphone"
+        />
+      )}
     </Flex>
   );
 }

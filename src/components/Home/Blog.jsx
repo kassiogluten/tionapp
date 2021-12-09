@@ -50,7 +50,7 @@ const posts = [
 export function Blog() {
   return (
     <>
-      <Flex
+      <Flex 
         color="azul"
         as="section"
         justify="center"
@@ -58,7 +58,7 @@ export function Blog() {
         w="100%"
         bg="branco"
       >
-        <Flex
+        <Flex 
           p="5rem 1rem 1rem"
           align="center"
           maxW={1000}
@@ -104,22 +104,23 @@ export function Blog() {
 }
 
 const Post = (props) => (
-  <VStack
+  <VStack 
     overflowY="auto"
     border="1px solid #001A3433"
     align="start"
     maxW={280}
     minW={260}
     m={4}
+    fontFamily="Space Grotesk"
   >
     <Image width={280} height={142} src={props.img} alt={props.title}></Image>
-    <VStack align="start" h={200} justify="space-between" p={4}>
-      <Tag bg="#FF465522" color="pessego">
+    <VStack align="start" h={200} p={4}>
+      <Tag fontWeight={500} bg="#FF465522" color="pessego">
         {" "}
         {props.cat}
       </Tag>
       <Heading fontSize={20}>{props.title}</Heading>
-      <HStack fontSize={14}>
+      <HStack flex={1} align="flex-end" fontSize={14}>
         <Text>{props.date}</Text>
         <Text color="pessego">/</Text>
         <Text>{props.leitura}min de leitura</Text>

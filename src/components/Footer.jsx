@@ -10,6 +10,7 @@ import {
 import { HeartSvg, LogoBrancaSvg } from "../icons";
 import { DownloadApp } from "./DownloadApp";
 import { SocialIcons } from "./SocialIcons";
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -27,7 +28,7 @@ export function Footer() {
         w="full"
       >
         <VStack align={{ base: "center", md: "flex-start" }} flex={1}>
-          <LogoBrancaSvg />
+        <Link passHref href="/"><a><LogoBrancaSvg /></a></Link>
           <Text maxW={215} py={8}>
             Viagens em Caratinga com Inteligência e Estrátegia.
           </Text>

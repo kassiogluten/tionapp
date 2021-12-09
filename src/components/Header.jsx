@@ -3,15 +3,6 @@ import {
   HStack,
   IconButton,
   Text,
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
-  VStack,
-  Link,
   Fade,
   Wrap,
   CloseButton,
@@ -22,7 +13,7 @@ import { FiMenu } from "react-icons/fi";
 import React, { useState } from "react";
 import { ClockSvg, LogoSvg, MailSvg, TelSvg } from "../icons";
 
-// import Link from "next/link";
+import Link from "next/link";
 
 import { Botao } from "./Botao";
 import { useRouter } from "next/dist/client/router";
@@ -48,7 +39,7 @@ export function Header() {
         align="center"
         w="100%"
         as="header"
-        pos={{ base: "fixed", md: "absolute" }}
+        pos="absolute"
       >
         <Flex
           p="1.5rem 2rem"
@@ -71,7 +62,9 @@ export function Header() {
           borderTopWidth="4px"
           borderColor="pessego"
         >
-          <LogoSvg />
+          <Link passHref href="/">
+            <a><LogoSvg /></a>
+          </Link>
           <HStack
             display={{ base: "none", md: "flex" }}
             spacing={0}
@@ -133,7 +126,10 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
     overflowY="scroll"
   >
     <HStack pt={5} justify="space-around">
-      <LogoSvg /> <CloseButton color="azul" size={60} />
+      <Link passHref href="/">
+      <a><LogoSvg /></a>
+      </Link>
+      <CloseButton color="azul" size={60} />
     </HStack>
     <HStack pt={5}>
       <Text fontWeight={600} color="pessego">
@@ -245,13 +241,13 @@ const MenuSuperior = () => (
       maxW="650px"
       flexDir={{ base: "column", md: "row" }}
     >
-      <Link as="a" href="tel: (33) 99912-3456">
+      <Link passHref href="tel: (33) 99912-3456">
         <HStack>
           <TelSvg />
           <Text>(33) 99912-3456</Text>
         </HStack>
       </Link>
-      <Link as="a" href="mailto:contato@tionapp.com.br">
+      <Link passHref href="mailto:contato@tionapp.com.br">
         <HStack>
           <MailSvg />
           <Text>contato@tionapp.com.br</Text>

@@ -24,8 +24,8 @@ export function Footer() {
       justify="center"
       w="100%"
     >
-      <Flex
-        p="8rem 1rem 4rem"
+      <Flex 
+        p={{base:"2rem", md:"8rem 1rem 4rem"}}
         maxW={1200}
         flexDir={{ base: "column", md: "row" }}
         w="full"
@@ -44,7 +44,7 @@ export function Footer() {
         <Wrap
           pt={{ base: 8, md: 0 }}
           flex={3}
-          justify={{ base: "center", md: "flex-end" }}
+          justify={{ base: "flex-start", md: "flex-end" }}
           spacing={4}
         >
           <LinkSection
@@ -76,16 +76,20 @@ export function Footer() {
           </LinkSection>
         </Wrap>
       </Flex>
-      <Flex
+      <Flex 
         align="center"
-        p="2rem 1rem"
+        p={{base:"0 1rem", md:"2rem 1rem"}}
         maxW={1200}
         flexDir={{ base: "column", md: "row" }}
         w="full"
         justify="space-between"
       >
         <Box flex={1}>
-          <Text maxW={320}>
+          <Text
+            p={{ base: "1rem", md: 0 }}
+            textAlign={{ base: "center", md: "left" }}
+            maxW={320}
+          >
             Rua Sylvio, R. Artur da Silva Araújo, 09 - Rodoviários, Caratinga -
             MG, 35302-612
           </Text>
@@ -115,7 +119,7 @@ export function Footer() {
         }}
       >
         <SocialIcons />
-        <Wrap pt={4} fontSize={14}>
+        <Wrap pt={{base:16, md:4}} fontSize={14}>
           <Text>Feito com</Text>
           <HeartSvg />
           <Text>

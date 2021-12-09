@@ -10,11 +10,14 @@ import {
 import { HeartSvg, LogoBrancaSvg } from "../icons";
 import { DownloadApp } from "./DownloadApp";
 import { SocialIcons } from "./SocialIcons";
-import Link from 'next/link'
+import Link from "next/link";
 
 export function Footer() {
   return (
-    <Flex zIndex={90} bg="azul" pos="relative"
+    <Flex
+      zIndex={90}
+      bg="azul"
+      pos="relative"
       flexDir="column"
       align="center"
       as="section"
@@ -28,7 +31,11 @@ export function Footer() {
         w="full"
       >
         <VStack align={{ base: "center", md: "flex-start" }} flex={1}>
-        <Link passHref href="/"><a><LogoBrancaSvg /></a></Link>
+          <Link passHref href="/">
+            <a>
+              <LogoBrancaSvg />
+            </a>
+          </Link>
           <Text maxW={215} py={8}>
             Viagens em Caratinga com Inteligência e Estrátegia.
           </Text>
@@ -40,7 +47,7 @@ export function Footer() {
           justify={{ base: "center", md: "flex-end" }}
           spacing={4}
         >
-          <LinkSection 
+          <LinkSection
             titulo="Empresa"
             descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
           >
@@ -96,7 +103,7 @@ export function Footer() {
         position="relative"
         _after={{
           content: "''",
-          width: { base: "75vw", md: "45vw", xl:600 },
+          width: { base: "75vw", md: "45vw", xl: 600 },
           height: "5px",
           bg: "pessego",
           position: "absolute",

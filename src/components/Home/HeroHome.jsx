@@ -28,9 +28,12 @@ export function HeroHome() {
           </Text>
 
           <DownloadApp align="start" py={4} />
-          <Botao as="a" url="/cadastro" text="Seja um motorista" w="full" />
+          <Box pb={4} w="full" maxW="360px">
+            <Botao as="a" url="/cadastro" text="Seja um motorista" w="full" />
+          </Box>
         </VStack>
-        <Flex transform="translateY(3rem)" 
+        <Flex
+          transform="translateY(3rem)"
           zIndex={-1}
           flex={1}
           position={{ base: "absolute", md: "unset" }}
@@ -44,7 +47,8 @@ export function HeroHome() {
             pos="absolute"
             bgGradient="linear(to-t, azul 5%, transparent 40%) "
           />
-          <Image w="full"
+          <Image
+            w="full"
             src="/hero1.png"
             alt="Modelo segurando celular com o aplicativo"
           />

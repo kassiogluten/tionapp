@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 
 import Image from "next/image";
+import Link from "next/link";
 import { BlogSvg } from "../../icons";
 import ScrollContainer from "react-indiana-drag-scroll";
 
@@ -50,7 +51,7 @@ const posts = [
 export function Blog() {
   return (
     <>
-      <Flex 
+      <Flex
         color="azul"
         as="section"
         justify="center"
@@ -58,7 +59,7 @@ export function Blog() {
         w="100%"
         bg="branco"
       >
-        <Flex 
+        <Flex
           p="5rem 1rem 1rem"
           align="center"
           maxW={1000}
@@ -73,7 +74,10 @@ export function Blog() {
               Nossas novidades
             </Heading>
           </HStack>
-          <Text maxW={220}>Acompanhe nossas notícias, novidades e dicas.</Text>
+
+          <Text display={{ base: "none", md: "flex" }} maxW={220}>
+            Acompanhe nossas notícias, novidades e dicas.
+          </Text>
         </Flex>
       </Flex>
       <Flex
@@ -94,6 +98,10 @@ export function Blog() {
                 date={post.date}
                 cat={post.cat}
                 leitura={post.leitura}
+                slug={post.title
+                  .toLowerCase()
+                  .replace(/ /g, "-")
+                  .replace(/[^\w-]+/g, "")}
               />
             ))}
           </Flex>
@@ -104,27 +112,38 @@ export function Blog() {
 }
 
 const Post = (props) => (
-  <VStack 
-    overflowY="auto"
-    border="1px solid #001A3433"
-    align="start"
-    maxW={280}
-    minW={260}
-    m={4}
-    fontFamily="Space Grotesk"
-  >
-    <Image width={280} height={142} src={props.img} alt={props.title}></Image>
-    <VStack align="start" h={200} p={4}>
-      <Tag fontWeight={500} bg="#FF465522" color="pessego">
-        {" "}
-        {props.cat}
-      </Tag>
-      <Heading fontSize={20}>{props.title}</Heading>
-      <HStack flex={1} align="flex-end" fontSize={14}>
-        <Text>{props.date}</Text>
-        <Text color="pessego">/</Text>
-        <Text>{props.leitura}min de leitura</Text>
-      </HStack>
-    </VStack>
-  </VStack>
+  <Link href={`blog/${props.slug}`} passHref>
+    <a>
+      <VStack
+        overflowY="auto"
+        border="1px solid #001A3433"
+        align="start"
+        maxW={280}
+        minW={260}
+        m={4}
+        fontFamily="Space Grotesk"
+        transition="transform 200ms ease"
+        _hover={{transform:'scale(1.007)', borderBottomColor:'pessego'}}
+      >
+        <Image
+          width={280}
+          height={142}
+          src={props.img}
+          alt={props.title}
+        ></Image>
+
+        <VStack align="start" h={200} p={4}>
+          <Tag fontWeight={500} bg="#FF465522" color="pessego">
+            {props.cat}
+          </Tag>
+          <Heading fontSize={20}>{props.title}</Heading>
+          <HStack flex={1} align="flex-end" fontSize={14}>
+            <Text>{props.date}</Text>
+            <Text color="pessego">/</Text>
+            <Text>{props.leitura}min de leitura</Text>
+          </HStack>
+        </VStack>
+      </VStack>
+    </a>
+  </Link>
 );

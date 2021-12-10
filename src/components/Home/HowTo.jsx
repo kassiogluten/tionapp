@@ -25,7 +25,7 @@ export function HowTo() {
         maxW={1000}
         w="full"
         justify="space-between"
-        flexDir={{ base: "column", sm: "row" }}
+        flexDir={{ base: "column", md: "row" }}
         //flexDir="column"
       >
         <VStack my="5rem" maxW={580}>

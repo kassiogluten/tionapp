@@ -13,7 +13,15 @@ import {
   AccordionIcon,
   Image,
 } from "@chakra-ui/react";
-import { CadeadoSvg, CarSvg, CarteiraSvg, FinanceiraSvg, Like2Svg, LikeSvg, VelocidadeSvg } from "../../icons";
+import {
+  CadeadoSvg,
+  CarSvg,
+  CarteiraSvg,
+  FinanceiraSvg,
+  Like2Svg,
+  LikeSvg,
+  VelocidadeSvg,
+} from "../../icons";
 import { DownloadApp } from "../DownloadApp";
 
 export function SobreOApp() {
@@ -29,7 +37,7 @@ export function SobreOApp() {
     >
       <Flex
         color="branco"
-        justify="right"
+        justify={{ base: "center", md: "right" }}
         w="100%"
         bgGradient="linear(to-br, pessego, gradient2)"
         flex={1}
@@ -55,23 +63,32 @@ export function SobreOApp() {
         zIndex={2}
         position="absolute"
         left="50%"
-        transform={{base:"translate(-50%, 5%)", lg:"translate(-50%, 20%)"}}
+        transform={{ base: "translate(-50%, 0)", lg: "translate(-50%, 20%)" }}
         src="/phone.png"
         alt="Phone"
       ></Image>
-      <Flex w="100%" flex={1}>
+      <Flex w="100%" flex={1} justify={{ base: "center", md: "start" }}>
         <Box
           p={{ base: "15rem 1rem 5rem", lg: "5rem 1rem 5rem 12rem" }}
           w="100%"
           maxW="550px"
         >
           <Accordion defaultIndex={[0]} allowToggle>
-            <Acordeao icon={<CarteiraSvg/>}
+            <Acordeao
+              icon={<CarteiraSvg />}
               titulo="Preço acessível"
               desc="O Tion é uma ótima opção quando você tem um compromisso marcado e precisa agendar uma viagem."
             />
-            <Acordeao icon={<CarSvg/>} titulo="Carros selecionados" desc="Todos os veículos são avaliados pela equipe do Tion após o cadastro do motorista. garantindo sua segurança e conforto." />
-            <Acordeao icon={<Like2Svg/>} titulo="Motoristas bem avaliados" desc="Através do nosso sistema de notas, podemos filtrar os melhores motoristas para trabalhar como parceiro." />
+            <Acordeao
+              icon={<CarSvg />}
+              titulo="Carros selecionados"
+              desc="Todos os veículos são avaliados pela equipe do Tion após o cadastro do motorista. garantindo sua segurança e conforto."
+            />
+            <Acordeao
+              icon={<Like2Svg />}
+              titulo="Motoristas bem avaliados"
+              desc="Através do nosso sistema de notas, podemos filtrar os melhores motoristas para trabalhar como parceiro."
+            />
           </Accordion>
         </Box>
       </Flex>
@@ -81,14 +98,15 @@ export function SobreOApp() {
 
 const Acordeao = (props) => (
   <AccordionItem my={4} borderWidth={2} borderColor="#00000022">
-    <AccordionButton _focus={{outlineColor:'gray.200'}} p={4}>
-      <HStack 
+    <AccordionButton p={4}>
+      <HStack
         color="pessego"
         fontSize={16}
         fontWeight={700}
         flex="1"
         textAlign="left"
-      >{props.icon}
+      >
+        {props.icon}
         <Text>{props.titulo}</Text>
       </HStack>
       <AccordionIcon color="#00000022" />

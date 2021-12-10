@@ -21,7 +21,7 @@ export default function Custom404() {
       <Header />
       <Box align="center" w="100%">
         <Flex
-          p="5rem 1rem"
+          p="15rem 1rem 1rem"
           align="center"
           maxW={1200}
           justify="space-between"

@@ -36,10 +36,10 @@ export function Footer() {
               <LogoBrancaSvg />
             </a>
           </Link>
-          <Text maxW={215} py={8}>
+          <Text color="#B6CFFF" maxW={215} py={8}>
             Viagens em Caratinga com Inteligência e Estrátegia.
           </Text>
-          <Text>CNPJ: 41.466.581/0001-39</Text>
+          <Text color="#B6CFFF">CNPJ: 41.466.581/0001-39</Text>
         </VStack>
         <Wrap
           pt={{ base: 8, md: 0 }}
@@ -85,7 +85,7 @@ export function Footer() {
         justify="space-between"
       >
         <Box flex={1}>
-          <Text
+          <Text color="#B6CFFF" fontSize="0.9rem"
             p={{ base: "1rem", md: 0 }}
             textAlign={{ base: "center", md: "left" }}
             maxW={320}

@@ -63,7 +63,9 @@ export function Header() {
           borderColor="pessego"
         >
           <Link passHref href="/">
-            <a><LogoSvg /></a>
+            <a>
+              <LogoSvg />
+            </a>
           </Link>
           <HStack
             display={{ base: "none", md: "flex" }}
@@ -113,7 +115,6 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
     in={mobileMenu}
     w="full"
     h="100vh"
-    p="1rem"
     flexDir="column"
     display={{ base: mobileMenu ? "flex" : "none", md: "none" }}
     pos="fixed"
@@ -127,19 +128,21 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
   >
     <HStack pt={5} justify="space-around">
       <Link passHref href="/">
-      <a><LogoSvg /></a>
+        <a>
+          <LogoSvg />
+        </a>
       </Link>
       <CloseButton color="azul" size={60} />
     </HStack>
     <HStack pt={5}>
-      <Text fontWeight={600} color="pessego">
+      <Text pl={2} fontWeight={600} color="pessego">
         Empresa
       </Text>
       <Box h="1px" w="full" bg="pessego" />
     </HStack>
     <SubMenuEmpresa />
     <HStack pt={5}>
-      <Text minW={135} fontWeight={600} color="pessego">
+      <Text pl={2} minW={140} fontWeight={600} color="pessego">
         Suporte e ajuda
       </Text>
       <Box h="1px" w="full" bg="pessego" />
@@ -150,7 +153,7 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
 );
 
 const SubMenuEmpresa = () => (
-  <>
+  <Wrap>
     <LinkSection
       titulo="Empresa"
       descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
@@ -176,11 +179,11 @@ const SubMenuEmpresa = () => (
       <Text>Seja um parceiro</Text>
       <Text>Tarifas</Text>
     </LinkSection>
-  </>
+  </Wrap>
 );
 
 const SubMenuSuporte = () => (
-  <>
+  <Wrap>
     <LinkSection titulo="Para Passageiro">
       <Text>Suporte</Text>
       <Text>Tarifas</Text>
@@ -193,7 +196,7 @@ const SubMenuSuporte = () => (
       <Text>Seja um parceiro</Text>
       <Text>FAQ</Text>
     </LinkSection>
-  </>
+  </Wrap>
 );
 
 const Menu = (props) => (

@@ -18,7 +18,7 @@ export const theme = extendTheme({
     Button: {
       baseStyle: {
         _hover: {
-          textDecoration: "underline",
+          // textDecoration: "underline",
         },
       },
     },

@@ -112,7 +112,8 @@ export function Blog() {
 }
 
 const Post = (props) => (
-  <Link href={`blog/${props.slug}`} passHref>
+  // <Link href={`blog/${props.slug}`} passHref>
+  <Link href={"/blog/" + props.slug} passHref>
     <a>
       <VStack
         overflowY="auto"
@@ -123,7 +124,7 @@ const Post = (props) => (
         m={4}
         fontFamily="Space Grotesk"
         transition="transform 200ms ease"
-        _hover={{transform:'scale(1.007)', borderBottomColor:'pessego'}}
+        _hover={{ transform: "scale(1.007)", borderBottomColor: "pessego" }}
       >
         <Image
           width={280}

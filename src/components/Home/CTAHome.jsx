@@ -1,10 +1,4 @@
-import {
-  Flex,
-  Text,
-  Heading,
-  VStack,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Text, Heading, VStack, Box } from "@chakra-ui/react";
 
 import Link from "next/link";
 
@@ -41,11 +35,7 @@ export function CTAHome() {
             <strong>Tion</strong> visa proporcionar uma taxa única mensal, sem
             taxas por cada corrida realizada.
           </Text>
-          <Link href="/motorista/como-funciona">
-            <a>
-              <Botao w="full" text="Saiba mais" />
-            </a>
-          </Link>
+          <Botao url="/motorista/como-funciona" w="full" text="Saiba mais" />
           <Box
             position="absolute"
             bottom={0}

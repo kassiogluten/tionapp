@@ -73,7 +73,7 @@ export function SobreOApp() {
           w="100%"
           maxW="550px"
         >
-          <Accordion defaultIndex={[0]} allowToggle>
+          <Accordion defaultIndex={[0]} id="teste" allowToggle>
             <Acordeao
               icon={<CarteiraSvg />}
               titulo="Preço acessível"
@@ -97,7 +97,7 @@ export function SobreOApp() {
 }
 
 const Acordeao = (props) => (
-  <AccordionItem my={4} borderWidth={2} borderColor="#00000022">
+  <AccordionItem id="acordao" my={4} borderWidth={2} borderColor="#00000022">
     <AccordionButton p={4}>
       <HStack
         color="pessego"

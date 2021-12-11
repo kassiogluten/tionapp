@@ -10,6 +10,7 @@ import {
 import Head from "next/head";
 import { Header } from "../components/Header";
 import { useRouter } from "next/router";
+import { LogoBrancaSvg } from "../icons";
 
 export default function Custom404() {
   const router = useRouter();
@@ -18,16 +19,15 @@ export default function Custom404() {
       <Head>
         <title>ERRO 404</title>
       </Head>
-      <Header />
       <Box align="center" w="100%">
         <Flex
-          p="15rem 1rem 1rem"
           align="center"
           maxW={1200}
-          justify="space-between"
-          h={400}
+          justify="space-evenly"
+          h="100vh"
           flexDir="column"
-        >
+          >
+          <LogoBrancaSvg/>
           <Heading>Página não encontrada</Heading>
           <HStack>
             <Text>Erro 404 no link:</Text>

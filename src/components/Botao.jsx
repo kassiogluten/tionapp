@@ -2,9 +2,9 @@ import { Button } from "@chakra-ui/button";
 
 export const Botao = (props) => (
   <Button {...props}
-    _hover={{ transform: "scale(1.01)", boxShadow: "0 0 6px #FF4655, 0 0 12px #FF465577"}}
-    colorScheme="none"
+    _hover={{ transform: "scale(1.01)", boxShadow: "0 0 6px #FF4655, 0 0 12px #FF465577", bgGradient:"linear(to-r, pessego, gradient2)"}}
     bgGradient="linear(to-r, pessego, gradient2)"
+    colorScheme="none"
     h="54px"
     px={12}
     fontSize="16px"
@@ -12,7 +12,7 @@ export const Botao = (props) => (
     color="branco"
     w={props.w || 'inherit'}
     href={props.url}
-    as={props.url ? "a" : "Button"}
+    as={props.url ? "a" : Button}
   >
     {props.text}
   </Button>

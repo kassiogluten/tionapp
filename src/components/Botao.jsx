@@ -12,7 +12,7 @@ export const Botao = (props) => (
     color="branco"
     w={props.w || 'inherit'}
     href={props.url}
-    as="a"
+    as={props.url ? "a" : "Button"}
   >
     {props.text}
   </Button>

@@ -1,4 +1,4 @@
-const random = Math.ceil(Math.random(1,60) * 20)
+const random = () => Math.ceil(Math.random(1,60) * 5,5)
 export const posts = [
   {
     id: 1,
@@ -38,15 +38,15 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=1",
     date: "28, Out",
     cat: "Eventos",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 5,
     title: "Atualização: Pagamentos por QR Code chegou",
-    img: "https://picsum.photos/280/142?random=;~çççççççççççççççççççççççççççç;~ç;~ç;~ç;~ç;~ç;~ç;~ç;~ç;",
+    img: "https://picsum.photos/280/142?random=2",
     date: "20, Set",
     cat: "Atualizações",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=3",
     date: "13, Set",
     cat: "Tion",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 8,
@@ -62,7 +62,7 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=4",
     date: "10, Ago",
     cat: "Dicas",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=5",
     date: "28, Out",
     cat: "Eventos",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 10,
@@ -78,7 +78,7 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=6",
     date: "20, Set",
     cat: "Atualizações",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 11,
@@ -86,7 +86,7 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=7",
     date: "13, Set",
     cat: "Tion",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
   {
     id: 12,
@@ -94,6 +94,6 @@ export const posts = [
     img: "https://picsum.photos/280/142?random=8",
     date: "10, Ago",
     cat: "Dicas",
-    leitura: Math.ceil(Math.random(1,60) * 15),
+    leitura: random()
   },
 ];

@@ -1,21 +1,15 @@
 import React from "react";
 import {
-  Box,
   Flex,
   Heading,
   Text,
-  Stack,
   VStack,
   HStack,
-  Center,
-  Button,
-  Wrap,
   Tag,
 } from "@chakra-ui/react";
 
 import Link from "next/link";
 import Image from "next/image";
-import { InovarSvg, PessoasSvg, SegurancaSvg } from "../../icons";
 import { posts } from "../../posts";
 
 export function Content() {

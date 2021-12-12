@@ -27,7 +27,6 @@ export function Hero(props) {
           <Text>{props.subtitulo}</Text>
           <Heading
             fontSize={{ base: 36, md: 56 }}
-            
             bgGradient="linear(to-r, pessego, gradient2)"
             bgClip="text"
           >
@@ -35,16 +34,16 @@ export function Hero(props) {
           </Heading>
           {props.desc && <Text py={8}>{props.desc}</Text>}
         </VStack>
-        <Box w="full" maxW={592} h={424} position="relative">
-          {props.imagem && (
+        {props.imagem && (
+          <Box w="full" maxW={592} h={424} position="relative">
             <Image
               objectFit={props.fit || "cover"}
               src={props.imagem}
               layout="fill"
               alt={props.titulo}
             />
-          )}
-        </Box>
+          </Box>
+        )}
       </Flex>
     </Flex>
   );

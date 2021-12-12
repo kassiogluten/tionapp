@@ -24,11 +24,11 @@ import {
 } from "../../icons";
 import { DownloadApp } from "../DownloadApp";
 
-export function SobreOApp() {
+export function SobreOApp(props) {
   return (
     <Flex
       color="#000"
-      bg="branco"
+      bg={props.bg || "branco"}
       as="section"
       justify="center"
       align="center"

@@ -15,7 +15,7 @@ import { posts } from "../../posts";
 export function Content() {
   return (
     <Flex as="section" justify="center" align="center" w="100%" bg="branco">
-      <Flex flexWrap="wrap" p="1rem 1rem 5rem" align="start" maxW={1200} w="full">
+      <Flex flexWrap="wrap" p="2rem 1rem" justify="center" align="start" maxW={1200} w="full">
         {posts.map((post) => (
           <Post
             key={post.title}
@@ -46,7 +46,7 @@ const Post = (props) => (
         minW={260}
         m={4}
         fontFamily="Space Grotesk"
-        transition="transform 200ms ease"
+        transition="all 200ms ease"
         _hover={{ transform: "scale(1.007)", borderBottomColor: "pessego" }}
       >
         <Image

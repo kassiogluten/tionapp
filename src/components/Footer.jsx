@@ -16,7 +16,7 @@ import { useRouter } from "next/dist/client/router";
 export function Footer() {
   return (
     <Flex
-      zIndex={90}
+      zIndex={1}
       bg="azul"
       pos="relative"
       flexDir="column"

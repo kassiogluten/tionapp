@@ -1,4 +1,5 @@
-const random = () => Math.ceil(Math.random(1,60) * 5,5)
+const random = () => Math.ceil(Math.random() * 7.5);
+
 export const posts = [
   {
     id: 1,
@@ -36,64 +37,64 @@ export const posts = [
     id: 5,
     title: "Show em Caratinga tem como patrocinador oficial o Tion.",
     img: "https://picsum.photos/280/142?random=1",
-    date: "28, Out",
+    date: "08, Ago",
     cat: "Eventos",
-    leitura: random()
+    leitura: random(),
   },
   {
-    id: 5,
+    id: 6,
     title: "Atualização: Pagamentos por QR Code chegou",
     img: "https://picsum.photos/280/142?random=2",
-    date: "20, Set",
+    date: "20, Jul",
     cat: "Atualizações",
-    leitura: random()
+    leitura: random(),
   },
   {
     id: 7,
     title: "Expansão: O Tion chegou em Ipatinga!",
     img: "https://picsum.photos/280/142?random=3",
-    date: "13, Set",
+    date: "13, Jul",
     cat: "Tion",
-    leitura: random()
+    leitura: random(),
   },
   {
     id: 8,
     title: "Para motoristas: Qual o dia ideial para lavar o seu carro?",
     img: "https://picsum.photos/280/142?random=4",
-    date: "10, Ago",
+    date: "10, Jul",
     cat: "Dicas",
-    leitura: random()
+    leitura: random(),
   },
   {
     id: 9,
     title: "Show em Caratinga tem como patrocinador oficial o Tion.",
     img: "https://picsum.photos/280/142?random=5",
-    date: "28, Out",
+    date: "28, Mai",
     cat: "Eventos",
-    leitura: random()
+    leitura: random(),
   },
   {
     id: 10,
     title: "Atualização: Pagamentos por QR Code chegou",
     img: "https://picsum.photos/280/142?random=6",
-    date: "20, Set",
-    cat: "Atualizações",
-    leitura: random()
+    date: "20, Mai",
+    cat: "Dicas",
+    leitura: random(),
   },
   {
     id: 11,
     title: "Expansão: O Tion chegou em Ipatinga!",
     img: "https://picsum.photos/280/142?random=7",
-    date: "13, Set",
-    cat: "Tion",
-    leitura: random()
+    date: "13, Mai",
+    cat: "Atualizações",
+    leitura: random(),
   },
   {
     id: 12,
     title: "Para motoristas: Qual o dia ideial para lavar o seu carro?",
     img: "https://picsum.photos/280/142?random=8",
-    date: "10, Ago",
-    cat: "Dicas",
-    leitura: random()
+    date: "10, Abr",
+    cat: "Tion",
+    leitura: random(),
   },
 ];

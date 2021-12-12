@@ -1,12 +1,12 @@
 import { Flex, Text, Heading, Wrap, VStack, Center } from "@chakra-ui/react";
 import { DeliverySvg, HatchSvg, MotoSvg, SedanSvg } from "../icons";
 
-export function EscolhaCategoria() {
+export function EscolhaCategoria(props) {
   return (
     <Flex as="section" justify="center" align="center" w="100%">
       <Flex p="1rem" maxW={1200} flexDir="column" flex={1}>
         <Heading fontWeight="bold" fontSize={24}>
-          Escolha a categoria que você deseja trabalhar
+          {props.titulo}
         </Heading>
         <Wrap justify="center" py={8} spacing={8}>
           <Categoria
@@ -44,9 +44,20 @@ const Categoria = (props) => (
     bg="#002C5855"
     height={277}
     width={267}
+    transform={{
+      base: props.breve && "translateY(20px)",
+      sm: "translateY(0px)",
+    }}
   >
     {props.breve && (
-      <Center mt={-14} fontWeight={600} p="5px 2rem" color="pessego" bg="branco">
+      <Center
+        opacity="0.75"
+        mt={-14}
+        fontWeight={600}
+        p="5px 2rem"
+        color="pessego"
+        bg="branco"
+      >
         EM BREVE
       </Center>
     )}

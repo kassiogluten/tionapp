@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 
 import Image from "next/image";
-import { PessoasSvg } from "../../icons";
+import { InovarSvg, PessoasSvg, SegurancaSvg } from "../../icons";
 
 export function Content() {
   return (
@@ -48,7 +48,7 @@ export function Content() {
           lacinia interdum ligula, eu tempor dui facilisis sed.
         </Text>
         <Text py={2}>
-          ju Duis elit neque, dictum quis ipsum id, porta cursus mi. Vivamus
+          Duis elit neque, dictum quis ipsum id, porta cursus mi. Vivamus
           laoreet tortor lorem, non rhoncus massa blandit quis. Pellentesque et
           iaculis urna. Pellentesque sollicitudin placerat turpis at iaculis.
           Pellentesque porttitor condimentum metus, quis laoreet metus mattis
@@ -69,12 +69,12 @@ export function Content() {
             desc="Queremos proporcionar a excelência, conforto, segurança e preço justo para nossos condutores e usuários."
           />
           <Valores
-            icon={<PessoasSvg />}
+            icon={<InovarSvg />}
             titulo="Inovar, criar e comprir"
             desc="Nossa missão no meio de transporte é inovar no transporte de pessoas. Mantendo nosso compromisso com a honestidade, e valorizamos nossa ética com colaboradores e usuários. "
           />
           <Valores
-            icon={<PessoasSvg />}
+            icon={<SegurancaSvg />}
             titulo="Segurança"
             desc="Levamos a sério a segurança de seus dados e em suas corridas."
           />

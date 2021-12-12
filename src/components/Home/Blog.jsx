@@ -16,37 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BlogSvg } from "../../icons";
 import ScrollContainer from "react-indiana-drag-scroll";
-
-const posts = [
-  {
-    title: "Show em Caratinga tem como patrocinador oficial o Tion.",
-    img: "/blog1.jpg",
-    date: "28, Out",
-    cat: "Eventos",
-    leitura: "12",
-  },
-  {
-    title: "Atualização: Pagamentos por QR Code chegou",
-    img: "/blog2.jpg",
-    date: "20, Set",
-    cat: "Atualizações",
-    leitura: "10",
-  },
-  {
-    title: "Expansão: O Tion chegou em Ipatinga!",
-    img: "/blog3.jpg",
-    date: "13, Set",
-    cat: "Tion",
-    leitura: "5",
-  },
-  {
-    title: "Para motoristas: Qual o dia ideial para lavar o seu carro?",
-    img: "/blog4.jpg",
-    date: "10, Ago",
-    cat: "Dicas",
-    leitura: "7",
-  },
-];
+import {posts} from '../../posts'
 
 export function Blog() {
   return (

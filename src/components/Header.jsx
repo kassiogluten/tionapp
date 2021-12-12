@@ -18,7 +18,7 @@ import Link from "next/link";
 import { Botao } from "./Botao";
 import { useRouter } from "next/dist/client/router";
 import { SocialIcons } from "./SocialIcons";
-import { LinkSection } from "./Footer";
+import { LinkList, LinkSection } from "./Footer";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export function Header() {
@@ -158,30 +158,31 @@ const SubMenuEmpresa = () => (
       titulo="Empresa"
       descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
     >
-      <Link href="/empresa/quem-somos" passHref>
-        <a>
-          <Text>Quem somos</Text>
-        </a>
-      </Link>
-      <Text>Nossos produtos</Text>
-      <Text>Novidades e eventos</Text>
+      <LinkList titulo="Quem somos" url="/empresa/quem-somos" />
+      <LinkList titulo="Nossos produtos" url="/empresa/nossos-produtos" />
+      <LinkList titulo="Novidades e eventos" url="/blog" />
     </LinkSection>
+
     <LinkSection
       titulo="Passageiro"
       descricao="Dirigiu e caiu direto na em sua conta. Nada de burocracia ou taxas."
     >
-      <Text>Como funciona</Text>
-      <Text>Tarifas</Text>
-      <Text>Promoções e cupons</Text>
-      <Text>Segurança e privacidade</Text>
+      <LinkList titulo="Como funciona" url="/passageiro/como-funciona" />
+      <LinkList titulo="Tarifas" url="/passageiro/tarifas" />
+      <LinkList titulo="Promoções e cupons" url="/passageiro/promocoes" />
+      <LinkList
+        titulo="Segurança e privacidade"
+        url="/passageiro/privacidade"
+      />
     </LinkSection>
+
     <LinkSection
       titulo="Motorista"
-      descricao="Entre em contato conosco para resolver qualquer problema, de forma rápida e eficiênte."
+      descricao="Entre em contato conosco para resolver qualquer problema, de forma rápida e eficiente."
     >
-      <Text>Como funciona</Text>
-      <Text>Seja um parceiro</Text>
-      <Text>Tarifas</Text>
+      <LinkList titulo="Como funciona" url="/motorista/como-funciona" />
+      <LinkList titulo="Tarifas" url="/motorista/tarifas" />
+      <LinkList titulo="Seja um parceiro" url="/cadastro" />
     </LinkSection>
   </Wrap>
 );
@@ -189,16 +190,12 @@ const SubMenuEmpresa = () => (
 const SubMenuSuporte = () => (
   <Wrap>
     <LinkSection titulo="Para Passageiro">
-      <Text>Suporte</Text>
-      <Text>Tarifas</Text>
-      <Text>Promoções e cupons</Text>
-      <Text>FAQ</Text>
+      <LinkList titulo="Atendimento e suporte" url="/passageiro/atendimento" />
+      <LinkList titulo="Perguntas frequentes" url="/passageiro/faq" />
     </LinkSection>
     <LinkSection titulo="Para Motorista">
-      <Text>Suporte</Text>
-      <Text>Tarifas</Text>
-      <Text>Seja um parceiro</Text>
-      <Text>FAQ</Text>
+      <LinkList titulo="Atendimento e suporte" url="/motorista/atendimento" />
+      <LinkList titulo="Perguntas frequentes" url="/motorista/faq" />
     </LinkSection>
   </Wrap>
 );

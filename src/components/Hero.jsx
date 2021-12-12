@@ -23,17 +23,27 @@ export function Hero(props) {
         justify="space-between"
         flexDir={{ base: "column", sm: "row" }}
       >
-        <VStack pb={8} px={4} justify="center" align="start">
+        <VStack maxW={450} pb={8} px={4} justify="center" align="start">
           <Text>{props.subtitulo}</Text>
-          <Heading color="pessego">{props.titulo}</Heading>
+          <Heading
+            fontSize={{ base: 36, md: 56 }}
+            
+            bgGradient="linear(to-r, pessego, gradient2)"
+            bgClip="text"
+          >
+            {props.titulo}
+          </Heading>
+          {props.desc && <Text py={8}>{props.desc}</Text>}
         </VStack>
         <Box w="full" maxW={592} h={424} position="relative">
-          <Image
-            objectFit="cover"
-            src={props.imagem}
-            layout="fill"
-            alt={props.titulo}
-          />
+          {props.imagem && (
+            <Image
+              objectFit={props.fit || "cover"}
+              src={props.imagem}
+              layout="fill"
+              alt={props.titulo}
+            />
+          )}
         </Box>
       </Flex>
     </Flex>

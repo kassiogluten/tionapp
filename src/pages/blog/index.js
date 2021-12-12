@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Hero } from "../../components/Hero";
-import { Content } from "../../components/QuemSomos/Content";
+import { Content } from "../../components/Blog/Content";
 import { FooterCTA } from "../../components/FooterCTA";
 
 export default function QuemSomos() {
@@ -24,12 +24,9 @@ export default function QuemSomos() {
       </Head>
       <Header />
       <Hero
-        titulo="Conheça o Tion"
-        subtitulo="Quem somos"
-        imagem="/carros.jpg"
+        titulo="Blog" desc="Novidades, notícias, atualizações, dicas..."
       />
       <Content/>
-      <FooterCTA/>
       <Footer />
     </>
   );

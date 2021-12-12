@@ -3399,6 +3399,155 @@ export const BlogSvg = () => (
     </defs>
   </svg>
 );
+export const PessoasSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#FF4655" />
+    <path
+      d="M21.7498 21.75C23.1305 21.75 24.2498 20.6307 24.2498 19.25C24.2498 17.8693 23.1305 16.75 21.7498 16.75C20.3691 16.75 19.2498 17.8693 19.2498 19.25C19.2498 20.6307 20.3691 21.75 21.7498 21.75Z"
+      stroke="url(#paint0_linear_926_6356)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M19.2502 40.5V34.25L18.0002 33V28C18.0002 27.6685 18.1319 27.3505 18.3663 27.1161C18.6007 26.8817 18.9187 26.75 19.2502 26.75H24.2502C24.5817 26.75 24.8996 26.8817 25.1341 27.1161C25.3685 27.3505 25.5002 27.6685 25.5002 28V33L24.2502 34.25V40.5"
+      stroke="url(#paint1_linear_926_6356)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M34.25 21.75C35.6307 21.75 36.75 20.6307 36.75 19.25C36.75 17.8693 35.6307 16.75 34.25 16.75C32.8693 16.75 31.75 17.8693 31.75 19.25C31.75 20.6307 32.8693 21.75 34.25 21.75Z"
+      stroke="url(#paint2_linear_926_6356)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M31.7502 40.5V35.5H29.2502L31.7502 28C31.7502 27.6685 31.8819 27.3505 32.1163 27.1161C32.3507 26.8817 32.6687 26.75 33.0002 26.75H35.5002C35.8317 26.75 36.1496 26.8817 36.3841 27.1161C36.6185 27.3505 36.7502 27.6685 36.7502 28L39.2502 35.5H36.7502V40.5"
+      stroke="url(#paint3_linear_926_6356)"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_926_6356"
+        x1="19.2498"
+        y1="19.25"
+        x2="24.2498"
+        y2="19.25"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_926_6356"
+        x1="18.0002"
+        y1="33.625"
+        x2="25.5002"
+        y2="33.625"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_926_6356"
+        x1="31.75"
+        y1="19.25"
+        x2="36.75"
+        y2="19.25"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+      <linearGradient
+        id="paint3_linear_926_6356"
+        x1="29.2502"
+        y1="33.625"
+        x2="39.2502"
+        y2="33.625"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#FF4655" />
+        <stop offset="0.99" stopColor="#F37053" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export const InovarSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#FF4655" />
+    <path
+      d="M36 20L35.125 20.875M16.75 28H18H16.75ZM28 16.75V18V16.75ZM38 28H39.25H38ZM20 20L20.875 20.875L20 20Z"
+      stroke="#FF4655"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M24.25 33C23.2006 32.2129 22.4254 31.1156 22.0343 29.8635C21.6432 28.6114 21.6559 27.268 22.0707 26.0236C22.4855 24.7791 23.2814 23.6967 24.3456 22.9297C25.4097 22.1627 26.6882 21.75 28 21.75C29.3118 21.75 30.5903 22.1627 31.6544 22.9297C32.7186 23.6967 33.5145 24.7791 33.9293 26.0236C34.3441 27.268 34.3568 28.6114 33.9657 29.8635C33.5746 31.1156 32.7994 32.2129 31.75 33C31.262 33.4831 30.8945 34.0743 30.6773 34.7258C30.4602 35.3773 30.3994 36.0707 30.5 36.75C30.5 37.413 30.2366 38.0489 29.7678 38.5178C29.2989 38.9866 28.663 39.25 28 39.25C27.337 39.25 26.7011 38.9866 26.2322 38.5178C25.7634 38.0489 25.5 37.413 25.5 36.75C25.6006 36.0707 25.5398 35.3773 25.3227 34.7258C25.1055 34.0743 24.738 33.4831 24.25 33"
+      stroke="#FF4655"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M25.1249 34.25H30.8749"
+      stroke="#FF4655"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+export const SegurancaSvg = () => (
+  <svg
+    width="56"
+    height="56"
+    viewBox="0 0 56 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect opacity="0.1" width="56" height="56" fill="#FF4655" />
+    <path
+      d="M34.25 26.75H21.75C20.3693 26.75 19.25 27.8693 19.25 29.25V36.75C19.25 38.1307 20.3693 39.25 21.75 39.25H34.25C35.6307 39.25 36.75 38.1307 36.75 36.75V29.25C36.75 27.8693 35.6307 26.75 34.25 26.75Z"
+      stroke="#FF4655"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M28 34.25C28.6904 34.25 29.25 33.6904 29.25 33C29.25 32.3096 28.6904 31.75 28 31.75C27.3096 31.75 26.75 32.3096 26.75 33C26.75 33.6904 27.3096 34.25 28 34.25Z"
+      stroke="#FF4655"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M23 26.75V21.75C23 20.4239 23.5268 19.1521 24.4645 18.2145C25.4021 17.2768 26.6739 16.75 28 16.75C29.3261 16.75 30.5979 17.2768 31.5355 18.2145C32.4732 19.1521 33 20.4239 33 21.75V26.75"
+      stroke="#FF4655"
+      strokeWidth="1.875"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 /* export const LogoSvg = () => (
   
   

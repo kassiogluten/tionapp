@@ -158,7 +158,11 @@ const SubMenuEmpresa = () => (
       titulo="Empresa"
       descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
     >
-      <Text>Quem somos</Text>
+      <Link href="/empresa/quem-somos" passHref>
+        <a>
+          <Text>Quem somos</Text>
+        </a>
+      </Link>
       <Text>Nossos produtos</Text>
       <Text>Novidades e eventos</Text>
     </LinkSection>

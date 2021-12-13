@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
-import { Hero } from "../../components/Hero";
-import { Content } from "../../components/Produtos/Content";
-import { FooterCTA } from "../../components/FooterCTA";
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
+import { Content } from "../components/Produtos/Content";
+import { FooterCTA } from "../components/FooterCTA";
 
 export default function NossosProdutos() {
   return (

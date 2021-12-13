@@ -158,9 +158,10 @@ const SubMenuEmpresa = () => (
       titulo="Empresa"
       descricao="O Tion não cobra por corrida, apenas um tarifa única mensal."
     >
-      <LinkList titulo="Quem somos" url="/empresa/quem-somos" />
-      <LinkList titulo="Nossos produtos" url="/empresa/nossos-produtos" />
+      <LinkList titulo="Quem somos" url="/quem-somos" />
+      <LinkList titulo="Nossos produtos" url="/nossos-produtos" />
       <LinkList titulo="Novidades e eventos" url="/blog" />
+      <LinkList titulo="Tarifas" url="/tarifas" />
     </LinkSection>
 
     <LinkSection
@@ -168,8 +169,6 @@ const SubMenuEmpresa = () => (
       descricao="Dirigiu e caiu direto na em sua conta. Nada de burocracia ou taxas."
     >
       <LinkList titulo="Como funciona" url="/passageiro/como-funciona" />
-      <LinkList titulo="Tarifas" url="/passageiro/tarifas" />
-      <LinkList titulo="Promoções e cupons" url="/passageiro/promocoes" />
       <LinkList
         titulo="Segurança e privacidade"
         url="/passageiro/privacidade"
@@ -181,7 +180,6 @@ const SubMenuEmpresa = () => (
       descricao="Entre em contato conosco para resolver qualquer problema, de forma rápida e eficiente."
     >
       <LinkList titulo="Como funciona" url="/motorista/como-funciona" />
-      <LinkList titulo="Tarifas" url="/motorista/tarifas" />
       <LinkList titulo="Seja um parceiro" url="/cadastro" />
     </LinkSection>
   </Wrap>

@@ -62,7 +62,7 @@ export function Blog() {
           <Flex p="1rem 1rem 5rem" align="start" maxW={1200} w="full">
             {posts.map((post) => (
               <Post
-                key={post.title}
+                key={post.id}
                 title={post.title}
                 img={post.img}
                 date={post.date}

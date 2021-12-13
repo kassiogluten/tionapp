@@ -37,14 +37,18 @@ export function SobreOApp(props) {
     >
       <Flex
         color="branco"
+        align="center"
         justify={{ base: "center", md: "right" }}
         w="100%"
         bgGradient="linear(to-br, pessego, gradient2)"
         flex={1}
+        pt={props.pt || 'inherit'}
       >
         <Box
           flex={1}
           p={{ base: "5rem 1rem 15rem", lg: "5rem 10rem 5rem 1rem" }}
+          // p="1rem"
+          // pr={{base:"1rem", md:"5rem"}}
           w="100%"
           maxW="550px"
         >
@@ -58,18 +62,18 @@ export function SobreOApp(props) {
           <DownloadApp align="start" />
         </Box>
       </Flex>
-      <Image
+      <Image  pt={props.pt || 'inherit'}
         w={{ base: 220, lg: 260 }}
         zIndex={2}
         position="absolute"
         left="50%"
-        transform={{ base: "translate(-50%, 0)", lg: "translate(-50%, 20%)" }}
+        transform={{ base: "translate(-50%, 0)", lg: "translate(-50%, 10%)" }}
         src="/phone.png"
         alt="Phone"
       ></Image>
-      <Flex w="100%" flex={1} justify={{ base: "center", md: "start" }}>
+      <Flex pt={props.pt || 'inherit'} w="100%" flex={1} justify={{ base: "center", md: "start" }}>
         <Box
-          p={{ base: "15rem 1rem 5rem", lg: "5rem 1rem 5rem 12rem" }}
+          p={{ base: "15rem 1rem 5rem", lg: "2rem 1rem 2rem 12rem" }}
           w="100%"
           maxW="550px"
         >

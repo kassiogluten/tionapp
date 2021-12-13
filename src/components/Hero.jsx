@@ -18,7 +18,7 @@ export function Hero(props) {
     <Flex as="section" justify="center" align="center" w="100%">
       <Flex
         p={{ base: "12rem 0 0", md: "15rem 1rem 1rem" }}
-        maxW={1200}
+        maxW={1100}
         w="full"
         justify="space-between"
         flexDir={{ base: "column", sm: "row" }}
@@ -29,6 +29,7 @@ export function Hero(props) {
             fontSize={{ base: 36, md: 56 }}
             bgGradient="linear(to-r, pessego, gradient2)"
             bgClip="text"
+            py={props.desc || props.subtitulo ? 0 : 10}
           >
             {props.titulo}
           </Heading>

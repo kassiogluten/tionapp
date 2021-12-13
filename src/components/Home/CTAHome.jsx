@@ -1,10 +1,8 @@
 import { Flex, Text, Heading, VStack, Box } from "@chakra-ui/react";
 
-import Link from "next/link";
-
 import { Botao } from "../Botao";
 
-export function CTAHome() {
+export function CTAHome(props) {
   return (
     <Flex
       color="#000"
@@ -20,22 +18,21 @@ export function CTAHome() {
         maxW={1150}
         flexDir="row"
         flex={1}
-        backgroundImage="/cta-home.jpg"
-        backgroundPosition="60%"
+        backgroundImage={props.img}
+        backgroundPosition={props.bp}
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         p={{ base: "35rem 1rem 2rem", md: 36 }}
+        justify={props.justify}
       >
         <VStack position="relative" p={8} bg="branco" maxW={420}>
           <Heading fontSize={{ base: 24, md: 32 }} color="pessego">
-            Tenha sua independência financeira de verdade.
+            {props.titulo}
           </Heading>
           <Text py={4}>
-            Nosso foco nos motoristas é estabilidade financeira, o{" "}
-            <strong>Tion</strong> visa proporcionar uma taxa única mensal, sem
-            taxas por cada corrida realizada.
+           {props.desc}
           </Text>
-          <Botao url="/motorista/como-funciona" w="full" text="Saiba mais" />
+          <Botao url={props.url} w="full" text={props.button} />
           <Box
             position="absolute"
             bottom={0}

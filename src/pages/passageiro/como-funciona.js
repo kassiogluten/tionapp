@@ -7,7 +7,7 @@ import { Content } from "../../components/Passageiro/Content";
 import { FooterCTA } from "../../components/FooterCTA";
 import { SobreOApp } from "../../components/Home/SobreOApp";
 
-export default function QuemSomos() {
+export default function ComoFunciona() {
   return (
     <>
       <Head>

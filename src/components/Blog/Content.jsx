@@ -18,7 +18,7 @@ export function Content() {
       <Flex flexWrap="wrap" p="2rem 1rem" justify="center" align="start" maxW={1200} w="full">
         {posts.map((post) => (
           <Post
-            key={post.title}
+            key={post.id}
             title={post.title}
             img={post.img}
             date={post.date}

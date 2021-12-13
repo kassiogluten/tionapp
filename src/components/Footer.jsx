@@ -132,7 +132,13 @@ export function Footer() {
         }}
       >
         <SocialIcons />
-        <Wrap pt={{ base: 16, md: 4 }} fontSize={14}>
+        <Wrap
+          as="a"
+          target="_blank"
+          href="https://www.instagram.com/suricato.agencia/"
+          pt={{ base: 16, md: 4 }}
+          fontSize={14}
+        >
           <Text>Feito com</Text>
           <HeartSvg />
           <Text>

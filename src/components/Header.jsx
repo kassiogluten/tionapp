@@ -217,7 +217,7 @@ function MenuLink(props) {
       borderBottomWidth={6}
       borderColor={router.pathname === props.url ? "pessego" : "branca"}
       color={router.pathname === props.url ? "pessego" : "branca"}
-      _hover={{ borderColor: "pessego", color: "pessego" }}
+      _hover={{ borderColor: "pessego", color: "pessego", cursor:'pointer' }}
       p={{ base: "1rem", md: "2.5rem 2rem" }}
       as="a"
       href={props.url}

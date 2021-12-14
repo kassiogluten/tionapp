@@ -117,6 +117,6 @@ const Item = (props) => (
     <Text>
       Bandeirada: <strong>R$ {props.band}</strong>
     </Text>
-    <Text>R$ {props.min}/min</Text>
+    <Text>R$ {props.min}/min e R$ {props.km}/KM</Text>
   </VStack>
 );

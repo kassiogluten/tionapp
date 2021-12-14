@@ -244,13 +244,13 @@ const MenuSuperior = () => (
       flexDir={{ base: "column", md: "row" }}
     >
       <Link passHref href="tel: (33) 99912-3456">
-        <HStack>
+        <HStack _hover={{color:"pessego", cursor:'pointer'}}>
           <TelSvg />
           <Text>(33) 99912-3456</Text>
         </HStack>
       </Link>
       <Link passHref href="mailto:contato@tionapp.com.br">
-        <HStack>
+        <HStack _hover={{color:"pessego", cursor:'pointer'}}>
           <MailSvg />
           <Text>contato@tionapp.com.br</Text>
         </HStack>

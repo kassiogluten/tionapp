@@ -22,7 +22,7 @@ export default function Home() {
           property="og:description"
           content="Aplicativo de mobilidade urbana"
         />
-        <meta property="og:image" content="/favicon.jpg" key="ogimage" />
+        <meta property="og:image" content="favicon.jpg" key="ogimage" />
       </Head>
       <Header />
       <HeroHome />

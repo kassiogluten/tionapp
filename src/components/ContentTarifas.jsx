@@ -35,9 +35,30 @@ export function ContentTarifas() {
           <Heading color="pessego">Carros</Heading>
         </HStack>
         <HStack as={ScrollContainer} py={8}>
-          <Item />
-          <Item />
-          <Item />
+          <Item
+            numero={1}
+            band={"5"}
+            km={"1,90"}
+            min={"0,20"}
+            minimo={10}
+            horario={"06:00h às 19:59h"}
+          />
+          <Item
+            numero={2}
+            band={"5"}
+            km={"2,00"}
+            min={"0,22"}
+            minimo={11}
+            horario={"20:00h às 23:59h"}
+          />
+          <Item
+            numero={3}
+            band={"6,50"}
+            km={"2,20"}
+            min={"0,22"}
+            minimo={12}
+            horario={"00:00h às 05:59h"}
+          />
         </HStack>
         <HStack pt={20} pb={8} w="full" borderBottom="1px solid #ddd">
           <Box>
@@ -46,9 +67,30 @@ export function ContentTarifas() {
           <Heading color="pessego">Motocicletas</Heading>
         </HStack>
         <HStack as={ScrollContainer} py={8}>
-          <Item />
-          <Item />
-          <Item />
+          <Item
+            numero={1}
+            band={"2,80"}
+            km={"0,80"}
+            min={"0,13"}
+            minimo={6}
+            horario={"06:00h às 19:59h"}
+          />
+          <Item
+            numero={2}
+            band={"3"}
+            km={"1,00"}
+            min={"0,16"}
+            minimo={7}
+            horario={"20:00h às 23:59h"}
+          />
+          <Item
+            numero={3}
+            band={"3,20"}
+            km={"1,20"}
+            min={"0,18"}
+            minimo={8}
+            horario={"00:00h às 05:59h"}
+          />
         </HStack>
       </Flex>
     </Flex>
@@ -65,16 +107,16 @@ const Item = (props) => (
   >
     <HStack>
       <PriceSvg />
-      <Heading fontSize={18}>Bandeira 01</Heading>
+      <Heading fontSize={18}>Bandeira {props.numero}</Heading>
     </HStack>
 
-    <Text>6h00 às 19h059 - Todos os dias</Text>
+    <Text>{props.horario} - Todos os dias</Text>
     <Text>
-      Taxa mínima: <strong>R$ 8,00</strong>
+      Taxa mínima: <strong>R$ {props.minimo}</strong>
     </Text>
     <Text>
-      Bandeirada: <strong>R$ 3,06</strong>
+      Bandeirada: <strong>R$ {props.band}</strong>
     </Text>
-    <Text>R$ 0,15/min e R$ 1,08/KM. </Text>
+    <Text>R$ {props.min}/min</Text>
   </VStack>
 );

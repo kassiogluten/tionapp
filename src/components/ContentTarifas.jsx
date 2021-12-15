@@ -45,14 +45,14 @@ export function ContentTarifas() {
           />
           <Item
             numero={2}
-            band={"5"}
-            km={"2,00"}
+            band={"6,50"}
+            km={"2,20"}
             min={"0,22"}
-            minimo={11}
+            minimo={12}
             horario={"20:00h às 23:59h"}
           />
           <Item
-            numero={3}
+            numero={2}
             band={"6,50"}
             km={"2,20"}
             min={"0,22"}
@@ -77,14 +77,14 @@ export function ContentTarifas() {
           />
           <Item
             numero={2}
-            band={"3"}
-            km={"1,00"}
-            min={"0,16"}
-            minimo={7}
+            band={"3,20"}
+            km={"1,20"}
+            min={"0,18"}
+            minimo={8}
             horario={"20:00h às 23:59h"}
           />
           <Item
-            numero={3}
+            numero={2}
             band={"3,20"}
             km={"1,20"}
             min={"0,18"}

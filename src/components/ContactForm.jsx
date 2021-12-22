@@ -184,7 +184,10 @@ export function ContactForm() {
           <Heading pb={8} color="pessego" fontSize={24}>
             Ou contate-nos
           </Heading>
-          <Link target="_blank" href="https://api.whatsapp.com/send?phone=553398650761">
+          <Link
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=553398650761"
+          >
             <HStack py={2}>
               <FaWhatsapp size={26} color="#FF4655" />
               <Text>Whatsapp</Text>
@@ -202,12 +205,15 @@ export function ContactForm() {
               <Text>(33) 99912-3456</Text>
             </HStack>
           </Link>
-          <Link>
-            <HStack py={2}>
-              <FiMapPin size={26} color="#FF4655" />
-              <Text>Rua Sylvio, R. Artur da Silva Araújo, 09 - Rodoviários, Caratinga - MG, 35302-612</Text>
-            </HStack>
-          </Link>
+
+          <HStack py={2}>
+            <FiMapPin size={26} color="#FF4655" />
+            <Text>
+              Rua Sylvio, R. Artur da Silva Araújo, 09 - Rodoviários, Caratinga
+              - MG, 35302-612
+            </Text>
+          </HStack>
+
           <SocialIcons />
         </VStack>
       </Flex>
@@ -219,7 +225,7 @@ function Campo(props) {
   return (
     <VStack w="100%" align="start">
       <FormLabel mb={0} mt={8} htmlFor={props.id}>
-        {props.label}{" "}
+        {props.label}
         {props.errors[props.id] && (
           <Text display="inline" color="red">
             (Campo obrigatório!)

@@ -30,34 +30,27 @@ export function Content() {
           Nosso destino é o bem para as pessoas
         </Heading>
         <Text py={2}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-          sagittis porttitor metus, at lobortis lacus tempor id. Nunc ac ipsum
-          tempus, lobortis dui a, vestibulum sapien. Class aptent taciti
-          sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Donec congue nibh nec eleifend feugiat. Aliquam nec felis
-          faucibus, commodo mauris et, tristique magna. Nullam luctus lorem
-          vitae porttitor lobortis.
+          Aplicativo de transporte urbano, com a proposta de inovar no ramo de
+          mobilidade urbana, que visa crescer e expandir sua marca na cidade de
+          Caratinga/MG e região com o nicho focado nos motoristas, clientes e
+          manter o nosso lema inovador em sermos diferentes.
         </Text>
+        <Heading color="pessego" py={8}>
+          HOJE A CIDADE DE CARATINGA ENCONTRA-SE SATURADA PELOS APLICATIVOS
+        </Heading>
         <Text py={2}>
-          Praesent pretium vestibulum viverra. Cras quis mauris lectus. Ut
-          elementum risus quam, nec pharetra massa accumsan non. Donec a nulla
-          vitae nulla consequat imperdiet. Phasellus ut magna leo. Donec vitae
-          porta turpis. Nulla ligula elit, vulputate a tellus ac, iaculis
-          iaculis eros. Nam consectetur dui eget nibh interdum, quis pharetra
-          tellus sodales. Vivamus non enim ut risus bibendum molestie. Sed
-          lacinia interdum ligula, eu tempor dui facilisis sed.
+          Nós da empresa TION APP temos nossos diferenciais, oferecendo preço
+          justo, cupons de desconto, parcerias comerciais, promoções especiais
+          para os clientes, fornecimento de máquina de cartão para pagamento no
+          crédito, débito e pix, <strong>corridas sem tarifas descontada dos motoristas</strong>,
+          pagamento mensal de 150 R$ por mês para ser nosso parceiro, testes 
+          <strong> grátis de 30 dias sem custo para os motoristas</strong> e melhores condições
+          financeiras para os motoristas.
         </Text>
-        <Text py={2}>
-          Duis elit neque, dictum quis ipsum id, porta cursus mi. Vivamus
-          laoreet tortor lorem, non rhoncus massa blandit quis. Pellentesque et
-          iaculis urna. Pellentesque sollicitudin placerat turpis at iaculis.
-          Pellentesque porttitor condimentum metus, quis laoreet metus mattis
-          et. In eget faucibus est. Pellentesque orci ex, maximus eget vehicula
-          eget, auctor euismod sem.
-        </Text>
+       
         <Wrap py={8} justify="center">
-          <Image alt="Carros" src="/carros.jpg" width={488} height={347} />
-          <Image alt="Carros" src="/carros.jpg" width={488} height={347} />
+          <Image alt="Carros" src="/ctga1.jpeg" width={488} height={347} />
+          <Image alt="Carros" src="/ctga2.jpeg" width={488} height={347} />
         </Wrap>
         <Heading color="pessego" p={8}>
           Valores do Tion

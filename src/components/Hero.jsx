@@ -39,6 +39,7 @@ export function Hero(props) {
           <Box w="full" maxW={592} h={424} position="relative">
             <Image
               objectFit={props.fit || "cover"}
+              objectPosition="top"
               src={props.imagem}
               layout="fill"
               alt={props.titulo}

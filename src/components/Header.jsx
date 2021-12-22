@@ -187,6 +187,11 @@ const SubMenuEmpresa = () => (
 
 const SubMenuSuporte = () => (
   <Wrap>
+    <LinkSection titulo="Atendimento">
+      <LinkList titulo="Suporte e ajuda" url="/atendimento" />
+    </LinkSection>
+  </Wrap>
+  /*   <Wrap>
     <LinkSection titulo="Para Passageiro">
       <LinkList titulo="Atendimento e suporte" url="/passageiro/atendimento" />
       <LinkList titulo="Perguntas frequentes" url="/passageiro/faq" />
@@ -195,7 +200,7 @@ const SubMenuSuporte = () => (
       <LinkList titulo="Atendimento e suporte" url="/motorista/atendimento" />
       <LinkList titulo="Perguntas frequentes" url="/motorista/faq" />
     </LinkSection>
-  </Wrap>
+  </Wrap> */
 );
 
 const Menu = (props) => (
@@ -218,7 +223,7 @@ function MenuLink(props) {
       borderBottomWidth={6}
       borderColor={router.pathname === props.url ? "pessego" : "branca"}
       color={router.pathname === props.url ? "pessego" : "branca"}
-      _hover={{ borderColor: "pessego", color: "pessego", cursor:'pointer' }}
+      _hover={{ borderColor: "pessego", color: "pessego", cursor: "pointer" }}
       p={{ base: "1rem", md: "2.5rem 2rem" }}
       as="a"
       href={props.url}
@@ -245,13 +250,13 @@ const MenuSuperior = () => (
       flexDir={{ base: "column", md: "row" }}
     >
       <Link passHref href="tel: (33) 99912-3456">
-        <HStack _hover={{color:"pessego", cursor:'pointer'}}>
+        <HStack _hover={{ color: "pessego", cursor: "pointer" }}>
           <TelSvg />
           <Text>(33) 99912-3456</Text>
         </HStack>
       </Link>
       <Link passHref href="mailto:contato@tionapp.com.br">
-        <HStack _hover={{color:"pessego", cursor:'pointer'}}>
+        <HStack _hover={{ color: "pessego", cursor: "pointer" }}>
           <MailSvg />
           <Text>contato@tionapp.com.br</Text>
         </HStack>

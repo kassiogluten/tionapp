@@ -11,17 +11,17 @@ export function EscolhaCategoria(props) {
         <Wrap justify="center" py={8} spacing={8}>
           <Categoria
             titulo="Tion Comun - Hatch"
-            descricao="Veículos a partir de 2008"
+            descricao="Veículos a partir de 2004"
             icon={<HatchSvg />}
           />
           <Categoria
             titulo="Tion Conforto - Sedan"
-            descricao="Sedan a partir de 2012"
+            descricao="Sedan a partir de 2004"
             icon={<SedanSvg />}
           />
           <Categoria
             titulo="Tion Moto"
-            descricao="Veículos a patir de 2008"
+            descricao="Veículos a patir de 2004"
             icon={<MotoSvg />}
           />
           <Categoria

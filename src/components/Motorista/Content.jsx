@@ -63,6 +63,7 @@ export function Content() {
           <Item icon={<EscudoSvg />} titulo="Identificação " />
           <Item icon={<QualidadeSvg />} titulo="Segurança" />
         </Wrap>
+        <Heading color="pessego" textAlign="center" alignSelf="center" maxW={700} fontSize={20}>Nossa identificação será através do (Adesivo com imã) fácil remoção e sem deixar danificações na pintura do seu veículo e sendo ótimo para retirar e poder curtir com sua família seu momento de laser.</Heading>
       </Flex>
     </Flex>
   );

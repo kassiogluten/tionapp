@@ -26,7 +26,7 @@ export default function QuemSomos() {
       <Hero
         titulo="Conheça o Tion"
         subtitulo="Quem somos"
-        imagem="/carros.jpg"
+        imagem="/joao.jpeg"
       />
       <Content/>
       <FooterCTA/>

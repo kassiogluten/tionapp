@@ -40,6 +40,7 @@ export function Cadastro() {
       status: "success",
       isClosable: true,
       position: "bottom",
+      duration: null,
     });
 
     setIsLoading(false);
@@ -70,8 +71,8 @@ export function Cadastro() {
         <Heading textAlign="center" fontWeight="bold" fontSize={24}>
           Faça o pré-cadastro
         </Heading>
-        
-          {/* <FormLabel htmlFor="Nome">Nome</FormLabel>
+
+        {/* <FormLabel htmlFor="Nome">Nome</FormLabel>
           <Input
             borderRadius={0}
             bg="branco"
@@ -84,53 +85,53 @@ export function Cadastro() {
             {...register("Nome", { required: true })}
           />
           {errors.Nome && <Text color="red">Nome obrigatório!</Text>} */}
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Nome"
-            label="Nome"
-            placeholder="Qual seu nome ?"
-          />
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Email"
-            label="E-mail"
-            placeholder="Qual seu e-mail ?"
-          />
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Telefone"
-            label="Telefone"
-            placeholder="Qual seu telefone ?"
-          />
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Idade"
-            label="Sua Idade"
-            placeholder="Qual sua idade ?"
-          />
-          <Campo
-            register={register}
-            errors={errors}
-            id="Veiculo"
-            label="Modelo do veículo"
-            placeholder="Qual modelo de seu veículo ?"
-          />
-          <Campo
-            register={register}
-            errors={errors}
-            id="Ano"
-            label="Ano do veículo"
-            placeholder="Qual ano do veículo ?"
-          />
-        
+        <Campo
+          required
+          register={register}
+          errors={errors}
+          id="Nome"
+          label="Nome"
+          placeholder="Qual seu nome ?"
+        />
+        <Campo
+          required
+          register={register}
+          errors={errors}
+          id="Email"
+          label="E-mail"
+          placeholder="Qual seu e-mail ?"
+        />
+        <Campo
+          required
+          register={register}
+          errors={errors}
+          id="Telefone"
+          label="Telefone"
+          placeholder="Qual seu telefone ?"
+        />
+        <Campo
+          required
+          register={register}
+          errors={errors}
+          id="Idade"
+          label="Sua Idade"
+          placeholder="Qual sua idade ?"
+        />
+        <Campo
+          register={register}
+          errors={errors}
+          id="Veiculo"
+          label="Modelo do veículo"
+          placeholder="Qual modelo de seu veículo ?"
+        />
+        <Campo
+          register={register}
+          errors={errors}
+          id="Ano"
+          label="Ano do veículo"
+          placeholder="Qual ano do veículo ?"
+        />
+
         {!isValid ? (
           <Botao
             mt={8}
@@ -169,7 +170,12 @@ function Campo(props) {
   return (
     <VStack w="100%" align="start">
       <FormLabel mb={0} mt={8} htmlFor={props.id}>
-        {props.label} {props.errors[props.id] && <Text display="inline" color="red">(Campo obrigatório!)</Text>}
+        {props.label}{" "}
+        {props.errors[props.id] && (
+          <Text display="inline" color="red">
+            (Campo obrigatório!)
+          </Text>
+        )}
       </FormLabel>
       <Input
         _placeholder={{ color: "gray.300", fontSize: 14 }}

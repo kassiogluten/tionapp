@@ -202,7 +202,8 @@ const Menu = (props) => (
   <>
     <MenuLink text="Início" url="/" />
     <MenuLink tab={props.tab} setTab={props.setTab} text="Empresa" />
-    <MenuLink tab={props.tab} setTab={props.setTab} text="Suporte e ajuda" />
+    <MenuLink text="Suporte e ajuda" url="/atendimento" />
+    {/* <MenuLink tab={props.tab} setTab={props.setTab} text="Suporte e ajuda" /> */}
     <Botao url="/cadastro#cadastre" text="Seja um motorista" />
   </>
 );

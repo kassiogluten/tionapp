@@ -67,11 +67,11 @@ export function Footer() {
               titulo="Segurança e privacidade"
               url="/passageiro/privacidade"
             />
-            <LinkList
+          {/*   <LinkList
               titulo="Atendimento e suporte"
               url="/passageiro/atendimento"
             />
-            <LinkList titulo="Perguntas frequentes" url="/passageiro/faq" />
+            <LinkList titulo="Perguntas frequentes" url="/passageiro/faq" /> */}
           </LinkSection>
           <LinkSection
             titulo="Motorista"
@@ -79,11 +79,11 @@ export function Footer() {
           >
             <LinkList titulo="Como funciona" url="/motorista/como-funciona" />
             <LinkList titulo="Seja um parceiro" url="/cadastro" />
-            <LinkList
+         {/*    <LinkList
               titulo="Atendimento e suporte"
               url="/motorista/atendimento"
             />
-            <LinkList titulo="Perguntas frequentes" url="/motorista/faq" />
+            <LinkList titulo="Perguntas frequentes" url="/motorista/faq" /> */}
           </LinkSection>
         </Wrap>
       </Flex>

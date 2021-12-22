@@ -37,27 +37,27 @@ export function ContentTarifas() {
         <HStack as={ScrollContainer} py={8}>
           <Item
             numero={1}
-            band={"5"}
-            km={"1,90"}
-            min={"0,20"}
+            band="5"
+            km="1,90"
+            min="0,20"
             minimo={10}
-            horario={"06:00h às 19:59h"}
+            horario="06:00h às 19:59h"
           />
           <Item
             numero={2}
-            band={"6,50"}
-            km={"2,20"}
-            min={"0,22"}
+            band="6,50"
+            km="2,20"
+            min="0,22"
             minimo={12}
-            horario={"20:00h às 23:59h"}
+            horario="20:00h às 23:59h"
           />
           <Item
             numero={2}
-            band={"6,50"}
-            km={"2,20"}
-            min={"0,22"}
+            band="6,50"
+            km="2,20"
+            min="0,22"
             minimo={12}
-            horario={"00:00h às 05:59h"}
+            horario="00:00h às 05:59h"
           />
         </HStack>
         <HStack pt={20} pb={8} w="full" borderBottom="1px solid #ddd">
@@ -69,27 +69,27 @@ export function ContentTarifas() {
         <HStack as={ScrollContainer} py={8}>
           <Item
             numero={1}
-            band={"2,80"}
-            km={"0,80"}
-            min={"0,13"}
+            band="2,80"
+            km="0,80"
+            min="0,13"
             minimo={6}
-            horario={"06:00h às 19:59h"}
+            horario="06:00h às 19:59h"
           />
           <Item
             numero={2}
-            band={"3,20"}
-            km={"1,20"}
-            min={"0,18"}
+            band="3,20"
+            km="1,20"
+            min="0,18"
             minimo={8}
-            horario={"20:00h às 23:59h"}
+            horario="20:00h às 23:59h"
           />
           <Item
             numero={2}
-            band={"3,20"}
-            km={"1,20"}
-            min={"0,18"}
+            band="3,20"
+            km="1,20"
+            min="0,18"
             minimo={8}
-            horario={"00:00h às 05:59h"}
+            horario="00:00h às 05:59h"
           />
         </HStack>
       </Flex>

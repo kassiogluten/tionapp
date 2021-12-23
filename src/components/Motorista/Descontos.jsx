@@ -27,17 +27,17 @@ export function ContentDescontos() {
         <Card
           heading="MAXIMUS ACADEMIA"
           img="/parceiro-maximus.jpeg"
-          text="70 todos os dias e 65,00 3x"
+          text="R$ 70 todos os dias e R$ 65,00 3x"
           cat="cat"
         />
         <Card
           heading="EXPRESSO LANCHES"
           img="/parceiro-expresso.jpeg"
-          text="10% nos lanches e nos refrigerantes não"
+          text="10% nos lanches (exceto refrigerantes)"
           cat="cat"
         />
         <Card
-          heading="NOVA CAR – MECÂNICA"
+          heading="NOOVA CAR – MECÂNICA"
           img="/parceiro-noovacar.jpeg"
           text="15% na mão de obra"
           cat="cat"
@@ -45,13 +45,13 @@ export function ContentDescontos() {
         <Card
           heading="AUTO BRILHO – LAVA JATO"
           img="/parceiro-autobrilho.jpeg"
-          text="30 dentro e fora (limpeza básica) por 25 R$"
+          text="R$ 30 dentro e fora (limpeza básica) por R$ 25"
           cat="cat"
         />
         <Card
           heading="GS LAVA JATO "
           img="/parceiro-gs.jpeg"
-          text="30 dentro e fora (limpeza básica) por 25 R$"
+          text="30 dentro e fora (limpeza básica) por R$ 25"
           cat="cat"
         />
       </Wrap>

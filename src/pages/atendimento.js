@@ -7,6 +7,7 @@ import { Content } from "../components/Blog/Content";
 import { FooterCTA } from "../components/FooterCTA";
 import { ContentTarifas } from "../components/ContentTarifas";
 import { ContactForm } from "../components/ContactForm";
+import { ContentAtendimento } from "../components/ContentAtendimento";
 
 export default function Tarifas() {
   return (
@@ -20,6 +21,7 @@ export default function Tarifas() {
       </Head>
       <Header />
       <Hero titulo="Atendimento" desc="Suporte e ajuda" />
+      <ContentAtendimento/>
       <ContactForm/>
       <FooterCTA />
       <Footer />

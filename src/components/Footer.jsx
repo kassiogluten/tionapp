@@ -56,6 +56,7 @@ export function Footer() {
             <LinkList titulo="Nossos produtos" url="/nossos-produtos" />
             <LinkList titulo="Novidades e eventos" url="/blog" />
             <LinkList titulo="Tarifas" url="/tarifas" />
+            <LinkList titulo="Suporte e ajuda" url="/atendimento" />
           </LinkSection>
           <LinkSection
             titulo="Passageiro"

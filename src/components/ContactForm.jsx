@@ -81,141 +81,142 @@ export function ContactForm() {
         align={{ base: "center", lg: "start" }}
         py={{ base: "4rem", md: "5rem" }}
         maxW={1100}
-        flexDir={{ base: "column", lg: "row" }}
+        flexDir="column"
         flex={1}
-        justify="space-between"
+        
         as="form"
         onSubmit={handleSubmit(handleSendMessage)}
       >
-        <VStack py={8} maxW={488} w="full" align="start">
-          <Heading color="pessego" fontSize={24}>
-            Preencha o formulário
-          </Heading>
-
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Nome"
-            label="Nome"
-            placeholder="Qual seu nome ?"
-          />
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Email"
-            label="E-mail"
-            placeholder="Qual seu e-mail ?"
-          />
-          <Campo
-            required
-            register={register}
-            errors={errors}
-            id="Telefone"
-            label="Telefone"
-            placeholder="Qual seu telefone ?"
-          />
-          <Campo
-            register={register}
-            errors={errors}
-            id="Assunto"
-            label="Assunto"
-            placeholder="Qual o assunto ?"
-          />
-          <Campo
-            register={register}
-            errors={errors}
-            id="Mensagem"
-            label="Mensagem"
-          >
-            <Textarea
-              minH={135}
-              resize="Vertical"
-              maxW={488}
-              _placeholder={{ color: "gray.300", fontSize: 14 }}
-              borderRadius={0}
-              bg="branco"
-              color="gray.800"
+        <Heading color="pessego" fontSize={32}>
+          Se sua dúvida não foi sanada acima:
+        </Heading>
+        <Flex flexDir={{ base: "column", lg: "row" }} w="full" justify="space-between">
+          <VStack py={8} maxW={488} w="full" align="start">
+            <Heading color="pessego" fontSize={24}>
+              Preencha o formulário
+            </Heading>
+            <Campo
+              required
+              register={register}
+              errors={errors}
+              id="Nome"
+              label="Nome"
+              placeholder="Qual seu nome ?"
+            />
+            <Campo
+              required
+              register={register}
+              errors={errors}
+              id="Email"
+              label="E-mail"
+              placeholder="Qual seu e-mail ?"
+            />
+            <Campo
+              required
+              register={register}
+              errors={errors}
+              id="Telefone"
+              label="Telefone"
+              placeholder="Qual seu telefone ?"
+            />
+            <Campo
+              register={register}
+              errors={errors}
+              id="Assunto"
+              label="Assunto"
+              placeholder="Qual o assunto ?"
+            />
+            <Campo
+              register={register}
+              errors={errors}
               id="Mensagem"
-              p="25px"
-              placeholder="Deixe sua mensagem"
-              type="text"
-              borderColor="gray.300"
-              {...register("Mensagem")}
-              mb={16}
-            />
-          </Campo>
-          <Box h={10} />
-          {!isValid ? (
-            <Botao
-              maxW={488}
-              alignSelf="start"
-              sx={{ cursor: "not-allowed" }}
-              opacity=".3"
-              bg="pessego"
-              color="cinza"
-              h="56px"
-              w="100%"
-              fontSize="14px"
-              onClick={() => {
-                trigger();
-              }}
-              text="Enviar"
-            />
-          ) : (
-            <Botao
-              maxW={488}
-              alignSelf="start"
-              _loading={{ color: "white" }}
-              isLoading={isLoading}
-              h="56px"
-              bg="pessego"
-              color="cinza"
-              w="full"
-              type="submit"
-              _hover={{ bgColor: "azul" }}
-              text="Enviar"
-            />
-          )}
-        </VStack>
-
-        <VStack py={8} maxW={488} w="full" align="start">
-          <Heading pb={8} color="pessego" fontSize={24}>
-            Ou contate-nos
-          </Heading>
-          <Link
-            target="_blank"
-            href="https://api.whatsapp.com/send?phone=553398650761"
-          >
+              label="Mensagem"
+            >
+              <Textarea
+                minH={135}
+                resize="Vertical"
+                maxW={488}
+                _placeholder={{ color: "gray.300", fontSize: 14 }}
+                borderRadius={0}
+                bg="branco"
+                color="gray.800"
+                id="Mensagem"
+                p="25px"
+                placeholder="Deixe sua mensagem"
+                type="text"
+                borderColor="gray.300"
+                {...register("Mensagem")}
+                mb={16}
+              />
+            </Campo>
+            <Box h={10} />
+            {!isValid ? (
+              <Botao
+                maxW={488}
+                alignSelf="start"
+                sx={{ cursor: "not-allowed" }}
+                opacity=".3"
+                bg="pessego"
+                color="cinza"
+                h="56px"
+                w="100%"
+                fontSize="14px"
+                onClick={() => {
+                  trigger();
+                }}
+                text="Enviar"
+              />
+            ) : (
+              <Botao
+                maxW={488}
+                alignSelf="start"
+                _loading={{ color: "white" }}
+                isLoading={isLoading}
+                h="56px"
+                bg="pessego"
+                color="cinza"
+                w="full"
+                type="submit"
+                _hover={{ bgColor: "azul" }}
+                text="Enviar"
+              />
+            )}
+          </VStack>
+          <VStack py={8} maxW={488} w="full" align="start">
+            <Heading pb={8} color="pessego" fontSize={24}>
+              Ou contate-nos
+            </Heading>
+            <Link
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=553398650761"
+            >
+              <HStack py={2}>
+                <FaWhatsapp size={26} color="#FF4655" />
+                <Text>Whatsapp</Text>
+              </HStack>
+            </Link>
+            <Link href="mailto:contato@tionapp.com.br">
+              <HStack py={2}>
+                <MailSvg color="#FF4655" />
+                <Text>contato@tionapp.com.br</Text>
+              </HStack>
+            </Link>
+            <Link href="tel: (33) 99912-3456">
+              <HStack py={2}>
+                <TelSvg color="#FF4655" />
+                <Text>(33) 99912-3456</Text>
+              </HStack>
+            </Link>
             <HStack py={2}>
-              <FaWhatsapp size={26} color="#FF4655" />
-              <Text>Whatsapp</Text>
+              <FiMapPin size={26} color="#FF4655" />
+              <Text>
+                Rua Sylvio, R. Artur da Silva Araújo, 09 - Rodoviários,
+                Caratinga - MG, 35302-612
+              </Text>
             </HStack>
-          </Link>
-          <Link href="mailto:contato@tionapp.com.br">
-            <HStack py={2}>
-              <MailSvg color="#FF4655" />
-              <Text>contato@tionapp.com.br</Text>
-            </HStack>
-          </Link>
-          <Link href="tel: (33) 99912-3456">
-            <HStack py={2}>
-              <TelSvg color="#FF4655" />
-              <Text>(33) 99912-3456</Text>
-            </HStack>
-          </Link>
-
-          <HStack py={2}>
-            <FiMapPin size={26} color="#FF4655" />
-            <Text>
-              Rua Sylvio, R. Artur da Silva Araújo, 09 - Rodoviários, Caratinga
-              - MG, 35302-612
-            </Text>
-          </HStack>
-
-          <SocialIcons />
-        </VStack>
+            <SocialIcons />
+          </VStack>
+        </Flex>
       </Flex>
     </Flex>
   );

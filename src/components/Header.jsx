@@ -181,6 +181,7 @@ const SubMenuEmpresa = () => (
     >
       <LinkList titulo="Como funciona" url="/motorista/como-funciona" />
       <LinkList titulo="Seja um parceiro" url="/cadastro" />
+      <LinkList titulo="Descontos" url="/motorista/descontos" />
     </LinkSection>
   </Wrap>
 );

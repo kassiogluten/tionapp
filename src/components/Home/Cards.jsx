@@ -23,6 +23,7 @@ export function Cards() {
       bg="azul"
     >
       <Flex
+      pt={300}
         pb="3rem"
         align="center"
         maxW={1000}

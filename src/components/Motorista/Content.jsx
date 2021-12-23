@@ -10,6 +10,7 @@ import {
   Center,
   Button,
   Wrap,
+  Spacer,
 } from "@chakra-ui/react";
 
 import Image from "next/image";
@@ -25,6 +26,7 @@ import {
   SegurancaSvg,
   VelocidadeSvg,
 } from "../../icons";
+import { Botao } from "../Botao";
 
 export function Content() {
   return (
@@ -63,7 +65,17 @@ export function Content() {
           <Item icon={<EscudoSvg />} titulo="Identificação " />
           <Item icon={<QualidadeSvg />} titulo="Segurança" />
         </Wrap>
-        <Heading color="pessego" textAlign="center" alignSelf="center" maxW={700} fontSize={20}>Nossa identificação será através do (Adesivo com imã) fácil remoção e sem deixar danificações na pintura do seu veículo e sendo ótimo para retirar e poder curtir com sua família seu momento de laser.</Heading>
+        <VStack>
+          <Heading textAlign="center" py={8} color="pessego" maxW={600} fontSize={20}>
+            Nossa identificação será através do (Adesivo com imã) fácil remoção,
+            sem deixar danificações na pintura do seu veículo e sendo fácil
+            remoção para curtir o final de semana em família.
+          </Heading>
+          <Heading textAlign="center" py={8} color="pessego" maxW={600} fontSize={20}>
+            Confira também os descontos oferecidos por nossos parceiros.
+          </Heading>
+          <Botao text="Ver descontos" url="/motorista/descontos" />
+        </VStack>
       </Flex>
     </Flex>
   );
@@ -94,7 +106,7 @@ const Valores = (props) => (
   </VStack>
 );
 const Item = (props) => (
-  <VStack p={8} align="start" w={250} >
+  <VStack p={8} align="start" w={250}>
     <HStack pb={2} fontWeight={500}>
       {props.icon}
       <Text>{props.titulo}</Text>

@@ -38,7 +38,7 @@ export default function Home() {
         justify="flex-start"
         bp="60%"
       />
-      <HowTo />
+      {/* <HowTo /> */}
       <Cards />
       <Blog />
       <FooterCTA img="/phone.png" />

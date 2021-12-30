@@ -28,31 +28,48 @@ export function ContentDescontos() {
           heading="MAXIMUS ACADEMIA"
           img="/parceiro-maximus.jpeg"
           text="R$ 70 todos os dias e R$ 65,00 3x"
-          cat="cat"
         />
         <Card
           heading="EXPRESSO LANCHES"
           img="/parceiro-expresso.jpeg"
           text="10% nos lanches (exceto refrigerantes)"
-          cat="cat"
         />
         <Card
           heading="NOOVA CAR – MECÂNICA"
           img="/parceiro-noovacar.jpeg"
           text="15% na mão de obra"
-          cat="cat"
         />
         <Card
           heading="AUTO BRILHO – LAVA JATO"
           img="/parceiro-autobrilho.jpeg"
           text="R$ 30 dentro e fora (limpeza básica) por R$ 25"
-          cat="cat"
         />
         <Card
           heading="GS LAVA JATO "
           img="/parceiro-gs.jpeg"
           text="30 dentro e fora (limpeza básica) por R$ 25"
-          cat="cat"
+        />
+        <Card
+          heading="REGIS PIZZARIA"
+          img="/parceiro-regis.jpeg"
+          text="10% em geral"
+        />
+        <Card
+          heading="CENTRO AUTOMOTIVO TOBOBA "
+          img="/parceiro-toboga.jpeg"
+          text="15% na mão de obra"
+        />
+        <Card
+          heading="POSTO DO IRMÃO"
+          img="/parceiro-postoirmao.jpeg"
+          text="Descontos: 
+            0.10 R$ centavos gasolina 
+            0.05 R$ álcool e diesel"
+        />
+        <Card
+          heading="POSTO ATLANTA"
+          img="/parceiro-atlanta.jpeg"
+          text="Desconto de 0,10 gasolina/etanol - NO DINHEIRO"
         />
       </Wrap>
     </Flex>

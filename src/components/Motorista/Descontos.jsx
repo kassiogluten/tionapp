@@ -51,12 +51,12 @@ export function ContentDescontos() {
         />
         <Card
           heading="REGIS PIZZARIA"
-          img="/parceiro-regis.jpeg"
+          img="/parceiro-regis.jpg"
           text="10% em geral"
         />
         <Card
           heading="CENTRO AUTOMOTIVO TOBOBA "
-          img="/parceiro-toboga.jpeg"
+          img="/parceiro-toboga.jpg"
           text="15% na mão de obra"
         />
         <Card
@@ -68,7 +68,7 @@ export function ContentDescontos() {
         />
         <Card
           heading="POSTO ATLANTA"
-          img="/parceiro-atlanta.jpeg"
+          img="/parceiro-atlanta.jpg"
           text="Desconto de 0,10 gasolina/etanol - NO DINHEIRO"
         />
       </Wrap>

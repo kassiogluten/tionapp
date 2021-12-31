@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Flex,
   Heading,
@@ -8,6 +8,7 @@ import {
   Tag,
   Box,
   Wrap,
+  Button,
 } from "@chakra-ui/react";
 
 import Image from "next/image";
@@ -27,12 +28,12 @@ export function ContentDescontos() {
         <Card
           heading="MAXIMUS ACADEMIA"
           img="/parceiro-maximus.jpeg"
-          text="R$ 70 todos os dias e R$ 65,00 3x"
+          text="R$ 70 todos os dias <br/>e R$ 65,00 3x"
         />
         <Card
           heading="EXPRESSO LANCHES"
           img="/parceiro-expresso.jpeg"
-          text="10% nos lanches (exceto refrigerantes)"
+          text="10% nos lanches <br/>(exceto refrigerantes)"
         />
         <Card
           heading="NOOVA CAR – MECÂNICA"
@@ -42,12 +43,12 @@ export function ContentDescontos() {
         <Card
           heading="AUTO BRILHO – LAVA JATO"
           img="/parceiro-autobrilho.jpeg"
-          text="R$ 30 dentro e fora (limpeza básica) por R$ 25"
+          text="R$ 30 dentro e fora <br/>(limpeza básica) por R$ 25"
         />
         <Card
           heading="GS LAVA JATO "
           img="/parceiro-gs.jpeg"
-          text="30 dentro e fora (limpeza básica) por R$ 25"
+          text="30 dentro e fora <br/>(limpeza básica) por R$ 25"
         />
         <Card
           heading="REGIS PIZZARIA"
@@ -55,21 +56,21 @@ export function ContentDescontos() {
           text="10% em geral"
         />
         <Card
-          heading="CENTRO AUTOMOTIVO TOBOBA "
+          heading="CENTRO AUTOMOTIVO TOBOGÃ "
           img="/parceiro-toboga.jpg"
           text="15% na mão de obra"
         />
         <Card
           heading="POSTO DO IRMÃO"
           img="/parceiro-postoirmao.jpeg"
-          text="Descontos: 
-            0.10 R$ centavos gasolina 
+          text="Descontos: <br/>
+            0.10 R$ gasolina <br/>
             0.05 R$ álcool e diesel"
         />
         <Card
           heading="POSTO ATLANTA"
           img="/parceiro-atlanta.jpg"
-          text="Desconto de 0,10 gasolina/etanol - NO DINHEIRO"
+          text="Desconto de R$ 0,10 gasolina/etanol - NO DINHEIRO"
         />
       </Wrap>
     </Flex>
@@ -110,7 +111,7 @@ const Card = (props) => (
       <Heading fontSize={28} lineHeight={1} pb={4} maxW={228}>
         {props.heading}
       </Heading>
-      <Text>{props.text}</Text>
+      <Text dangerouslySetInnerHTML={{__html:props.text}}/>
     </Box>
     <Box
       position="absolute"

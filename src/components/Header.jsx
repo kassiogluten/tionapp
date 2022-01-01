@@ -126,6 +126,7 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
     zIndex={5}
     overflowY="scroll"
   >
+    
     <HStack pt={5} justify="space-around">
       <Link passHref href="/">
         <a>
@@ -134,6 +135,7 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
       </Link>
       <CloseButton color="azul" size={60} />
     </HStack>
+    
     <HStack pt={5}>
       <Text pl={2} fontWeight={600} color="pessego">
         Empresa

@@ -214,7 +214,6 @@ export function ContactForm() {
                 Caratinga - MG, 35302-612
               </Text>
             </HStack>
-            <SocialIcons />
           </VStack>
         </Flex>
       </Flex>

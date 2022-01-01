@@ -5,11 +5,14 @@ import {
   Button,
   Center,
   Flex,
-  Heading,
-  Image,
   Input,
-  Tag,
   Text,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Tooltip,
 } from "@chakra-ui/react";
 import { useEffect, useState, useCallback } from "react";
 import { auth, firestore, googleAuthProvider } from "../lib/firebase";
@@ -17,8 +20,9 @@ import debounce from "lodash.debounce";
 import { useMyContext } from "../contexts/Context";
 
 import { useAuthState } from "react-firebase-hooks/auth";
+import { FaPen, FaTools, FaUserCog } from "react-icons/fa";
 
-export function Entrar() {
+export function User() {
   const [user] = useAuthState(auth);
   const [username, setUsername] = useState(null);
 
@@ -39,15 +43,15 @@ export function Entrar() {
   }, [user]);
 
   return (
-    <Center h={300}>
+    <Center h={450}>
       {user ? (
         !username ? (
-          <UsernameForm />
+          <RegisterUsername />
         ) : (
-          <SignOutButton username={username}/>
+          <UserInfo username={username} />
         )
       ) : (
-        <SignInButton user={user} username={username} />
+        <SignInButton />
       )}
     </Center>
   );
@@ -60,9 +64,9 @@ function SignInButton(props) {
   return <Button onClick={signInWithGoogle}>Entrar com Google</Button>;
 }
 
-function SignOutButton(props) {
+function UserInfo(props) {
   const { setUser } = useMyContext();
-  const [user, username] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   useEffect(() => {
     setUser(user);
   }, [user]);
@@ -72,20 +76,61 @@ function SignOutButton(props) {
       flexDir="column"
       h="full"
       justifyContent="space-between"
-      p={8}
+      px={6}
+      py={4}
+      w="full"
     >
       <Text fontSize=".8rem">{props.username}</Text>
-      <Avatar src={user?.photoURL} alt={user?.displayName} />
-      <Text fontWeight="bold">{user.displayName}</Text>
-      <Text fontSize=".8rem">{user.email}</Text>
-      <Button size="sm" onClick={() => auth.signOut()}>
-        Desconectar
-      </Button>
+      <Avatar size="lg" src={user?.photoURL} alt={user?.displayName} />
+      <Text fontWeight="bold">{user?.displayName}</Text>
+      <Text fontSize=".8rem">{user?.email}</Text>
+
+      <Accordion w="100%" allowToggle>
+        <Panel user={user} icon={<FaUserCog />} title="Perfil">
+          <Text opacity={0.5}>
+            Membro desde:{" "}
+            {new Date(user?.metadata.creationTime).toLocaleString("pt-BR")}
+          </Text>
+          <Text opacity={0.5}>
+            Último login:{" "}
+            {new Date(user?.metadata.lastSignInTime).toLocaleString("pt-BR")}
+          </Text>
+          <Button mt={4} onClick={() => auth.signOut()}>
+            Desconectar
+          </Button>
+        </Panel>
+        <Panel user={user} icon={<FaPen />} title="Posts">
+          Você ainda não tem posts.
+        </Panel>
+        <Panel user={user} icon={<FaTools />} title="Configurações">
+          Somente o administrador pode alterar as configurações.
+        </Panel>
+      </Accordion>
     </Flex>
   );
 }
 
-function UsernameForm() {
+const Panel = (props) => (
+  <AccordionItem
+    _focus={{ outline: 0 }}
+    borderRadius={8}
+    bg="#00000033"
+    mb={2}
+    fontSize="0.8rem"
+    border="none"
+  >
+    <AccordionButton lineHeight={1}>
+      <Box sx={{ svg: { mr: 2 } }} spacing={8} flex="1" textAlign="left">
+        {props.icon} {props.title}
+      </Box>
+      <AccordionIcon />
+    </AccordionButton>
+
+    <AccordionPanel>{props.children}</AccordionPanel>
+  </AccordionItem>
+);
+
+function RegisterUsername() {
   const [formValue, setFormValue] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -144,7 +189,6 @@ function UsernameForm() {
       if (username.length >= 3) {
         const ref = firestore.doc(`usernames/${username}`);
         const { exists } = await ref.get();
-        console.log("Firestore read executed!");
         setIsValid(!exists);
         setLoading(false);
       }

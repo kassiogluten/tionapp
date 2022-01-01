@@ -2,28 +2,35 @@ import {
   Avatar,
   HStack,
   useDisclosure,
-  useRadio,
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
   ModalCloseButton,
-  Button,
 } from "@chakra-ui/react";
 
 import React from "react";
-import { useMyContext } from "../contexts/Context";
 import { FaceSvg, InstaSvg, WhatsSvg } from "../icons";
-import { Entrar } from "./Entrar";
+import { User } from "./User";
+import { auth } from "../lib/firebase";
+
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export function SocialIcons() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { user } = useMyContext();
+  // const { user } = useMyContext();
+  const [user] = useAuthState(auth);
+  // console.log(user);
   return (
     <HStack>
-      <Avatar onClick={onOpen} mx={2} size="xs" src={user?.photoURL} />
+      <Avatar
+        _hover={{ borderWidth: 2, cursor: "pointer" }}
+        borderWidth={1}
+        borderColor="pessego"
+        onClick={onOpen}
+        mx={2}
+        size="xs"
+        src={user?.photoURL}
+      />
       <a href="https://www.facebook.com/Tion-105421665306951">
         <FaceSvg />
       </a>
@@ -33,11 +40,11 @@ export function SocialIcons() {
       <a href="https://www.instagram.com/tionapp/">
         <InstaSvg />
       </a>
-      <Modal size="xs" isCentered isOpen={isOpen} onClose={onClose}>
+      <Modal size="sm" isCentered isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent mx={2} >
           <ModalCloseButton />
-          <Entrar/>
+          <User />
         </ModalContent>
       </Modal>
     </HStack>

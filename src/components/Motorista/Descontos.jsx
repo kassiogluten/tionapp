@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Flex,
   Heading,
@@ -9,11 +9,39 @@ import {
   Box,
   Wrap,
   Button,
+  Image,
+  Badge,
+  Spacer,
+  CircularProgress,
+  SkeletonCircle,
+  SkeletonText,
+  Skeleton,
+  Spinner,
 } from "@chakra-ui/react";
 
-import Image from "next/image";
+import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+
+import { firestore } from "../../lib/firebase";
 
 export function ContentDescontos() {
+  const [parceiros, setParceiros] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+    async function getParceiros() {
+      setLoading(true)
+      const ref = await firestore
+        .collectionGroup("parceiros")
+        .orderBy("id", "asc")
+        .get();
+
+      setParceiros(ref.docs.map((doc) => doc.data()));
+      setLoading(false)
+      // console.log(parceiros);
+    }
+    getParceiros();
+  }, []);
+
   return (
     <Flex as="section" justify="center" align="center" w="100%">
       <Wrap
@@ -25,68 +53,62 @@ export function ContentDescontos() {
         color="pessego"
         spacing={8}
       >
-        <Card
-          heading="MAXIMUS ACADEMIA"
-          img="/parceiro-maximus.jpeg"
-          text="R$ 70 todos os dias <br/>e R$ 65,00 3x"
-        />
-        <Card
-          heading="EXPRESSO LANCHES"
-          img="/parceiro-expresso.jpeg"
-          text="10% nos lanches <br/>(exceto refrigerantes)"
-        />
-        <Card
-          heading="NOOVA CAR – MECÂNICA"
-          img="/parceiro-noovacar.jpeg"
-          text="15% na mão de obra"
-        />
-        <Card
-          heading="AUTO BRILHO – LAVA JATO"
-          img="/parceiro-autobrilho.jpeg"
-          text="R$ 30 dentro e fora <br/>(limpeza básica) por R$ 25"
-        />
-        <Card
-          heading="GS LAVA JATO "
-          img="/parceiro-gs.jpeg"
-          text="30 dentro e fora <br/>(limpeza básica) por R$ 25"
-        />
-        <Card
-          heading="REGIS PIZZARIA"
-          img="/parceiro-regis.jpg"
-          text="10% em geral"
-        />
-        <Card
-          heading="CENTRO AUTOMOTIVO TOBOGÃ "
-          img="/parceiro-toboga.jpg"
-          text="15% na mão de obra"
-        />
-        <Card
-          heading="POSTO DO IRMÃO"
-          img="/parceiro-postoirmao.jpeg"
-          text="Descontos: <br/>
-            0.10 R$ gasolina <br/>
-            0.05 R$ álcool e diesel"
-        />
-        <Card
-          heading="POSTO ATLANTA"
-          img="/parceiro-atlanta.jpg"
-          text="Desconto de R$ 0,10 gasolina/etanol - NO DINHEIRO"
-        />
+        {!loading ? (
+          parceiros.map((parceiro) => (
+            <Card
+              key={parceiro.heading}
+              heading={parceiro.heading}
+              img={parceiro.img}
+              text={parceiro.text}
+              address={parceiro.address}
+              whatsapp={parceiro.whatsapp}
+              tel={parceiro.tel || parceiro.whatsapp}
+            />
+          ))
+        ) : (
+          <>
+            <Esqueleto />
+            <Esqueleto />
+            <Esqueleto />
+          </>
+        )}
       </Wrap>
     </Flex>
   );
 }
 
+const Esqueleto = () => (
+  <Flex justify="space-between" flexDir="column" w={300} h={400} bg="white">
+    <Skeleton height="180px" />
+    <Skeleton mx="1rem" mt={4} height="40px" />
+    <SkeletonText mx="1rem" mt="4" noOfLines={3} spacing="4" />
+    <HStack mb="5px" mx="1rem">
+      <Skeleton w="30%" height="30px" />
+      <Skeleton w="30%" height="30px" />
+      <Skeleton w="30%" height="30px" />
+    </HStack>
+  </Flex>
+);
+
 const Card = (props) => (
   <VStack
+    h={450}
     width={300}
-    h={400}
     position="relative"
     m="1rem"
     bg="branco"
     align="center"
   >
-    <Box width={300} height={300} pos="relative" overflow="hidden">
+    <Box width={300} height={200} pos="relative" overflow="hidden">
+      <Image
+        w="full"
+        h={200}
+        fit="contain"
+        alt={props.heading}
+        src={props.img || "/logo.jpg"}
+        zIndex={3}
+        position="relative"
+      />
       <Box
         sx={{
           filter: "blur(8px)",
@@ -94,25 +116,33 @@ const Card = (props) => (
           transform: "scale(1.2)",
         }}
         w="full"
-        h={"full"}
+        h="full"
         pos="absolute"
         bgImage={props.img}
         bgSize="auto"
-      />
-      <Image
-        objectFit="contain"
-        quality={90}
-        alt={props.heading}
-        src={props.img}
-        layout="fill"
+        bgPos="center"
+        top={0}
+        left={0}
+        zIndex={2}
       />
     </Box>
-    <Box w="full" align="start" p="2rem">
+    <Flex
+      flexDir="column"
+      maxH={250}
+      overflowY="hidden"
+      w="full"
+      justify="space-between"
+      p="1.5rem"
+    >
       <Heading fontSize={28} lineHeight={1} pb={4} maxW={228}>
         {props.heading}
       </Heading>
-      <Text dangerouslySetInnerHTML={{__html:props.text}}/>
-    </Box>
+      <Text
+        lineHeight={1.1}
+        fontSize="0.9rem"
+        dangerouslySetInnerHTML={{ __html: props.text }}
+      />
+    </Flex>
     <Box
       position="absolute"
       bottom={0}
@@ -120,5 +150,62 @@ const Card = (props) => (
       w="70%"
       bgGradient="linear(to-r, pessego, gradient2)"
     />
+    <Spacer />
+    <HStack pb={1} w="70%">
+      <Button
+        bg="branco"
+        as="a"
+        target="_blank"
+        href={
+          props.address
+            ? `https://www.google.com/maps/place/ ${props.address} Caratinga`
+            : null
+        }
+        colorScheme="blackAlpha"
+        disabled={!props.address}
+        borderRadius={0}
+        fontSize="0.7rem"
+        _hover={{ bg: "azul" }}
+        flex={1}
+        fontWeight={400}
+        sx={{ svg: { fill: "pessego" } }}
+      >
+        <FaMapMarkerAlt size={16} />
+      </Button>
+      <Button
+        bg="branco"
+        as="a"
+        target="_blank"
+        href={
+          props.whatsapp
+            ? "https://api.whatsapp.com/send?phone=+55" + props.whatsapp
+            : null
+        }
+        colorScheme="blackAlpha"
+        disabled={!props.whatsapp}
+        borderRadius={0}
+        fontSize="0.7rem"
+        _hover={{ bg: "azul" }}
+        flex={1}
+        fontWeight={400}
+        sx={{ svg: { fill: "pessego" } }}
+      >
+        <FaWhatsapp size={16} />
+      </Button>
+      <Button
+        bg="branco"
+        disabled={!props.tel}
+        as="a"
+        href={props.tel ? "tel:" + props.tel : null}
+        borderRadius={0}
+        fontSize="0.7rem"
+        _hover={{ bg: "azul" }}
+        flex={1}
+        fontWeight={400}
+        sx={{ svg: { fill: "pessego" } }}
+      >
+        <FaPhoneAlt size={16} />
+      </Button>
+    </HStack>
   </VStack>
 );

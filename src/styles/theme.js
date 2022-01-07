@@ -25,7 +25,7 @@ export const theme = extendTheme({
     AccordionButton: {
       baseStyle: {
         _focus: {
-          outlineColor:'pessego'
+          outlineColor: "pessego",
           //textDecoration: "underline",
         },
       },

@@ -9,6 +9,7 @@ import {
   HStack,
   Center,
   Button,
+  Spinner,
 } from "@chakra-ui/react";
 
 import Image from "next/image";
@@ -24,6 +25,7 @@ export function Hero(props) {
         flexDir={{ base: "column", sm: "row" }}
       >
         <VStack maxW={450} pb={8} px={4} justify="center" align="start">
+          
           <Text>{props.subtitulo}</Text>
           <Heading
             fontSize={{ base: 36, md: 56 }}
@@ -31,7 +33,7 @@ export function Hero(props) {
             bgClip="text"
             py={props.desc || props.subtitulo ? 0 : 10}
           >
-            {props.titulo}
+            {props.titulo} 
           </Heading>
           {props.desc && <Text py={8}>{props.desc}</Text>}
         </VStack>

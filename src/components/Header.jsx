@@ -114,7 +114,7 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
     as={Fade}
     in={mobileMenu}
     w="full"
-    h="100vh"
+    h="100%"
     flexDir="column"
     display={{ base: mobileMenu ? "flex" : "none", md: "none" }}
     pos="fixed"
@@ -150,7 +150,9 @@ const MobileMenu = ({ mobileMenu, setMobileMenu }) => (
       <Box h="1px" w="full" bg="pessego" />
     </HStack>
     <SubMenuSuporte />
-    <Botao url="/cadastro#cadastre" text="Seja um motorista" />
+    <Box pt={4} w="full">
+      <Botao url="/cadastro#cadastre" text="Seja um motorista" />
+    </Box>
   </Flex>
 );
 

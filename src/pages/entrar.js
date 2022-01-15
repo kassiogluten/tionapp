@@ -39,7 +39,7 @@ export default function Entrar() {
   }, [user]);
 
   return (
-    <Center h="100vh">
+    <Center h="100%">
       {user ? (
         !username ? (
           <UsernameForm />
@@ -53,7 +53,7 @@ export default function Entrar() {
   );
 }
 
-function SignInButton(props) {
+function SignInButton() {
   const signInWithGoogle = async () => {
     await auth.signInWithPopup(googleAuthProvider);
   };

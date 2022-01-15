@@ -60,6 +60,7 @@ export function Content() {
           />
         </Wrap>
         <Wrap spacing={8} justify="center">
+          <Text textAlign="center">(Apólice de seguro de acidentes pessoais a passageiros) com responsabilidade do motorista em caso de necessidade de utilização.</Text>
           <Item icon={<PrecoSvg />} titulo="Sem tarifas para condutores" />
           <Item icon={<PriceSvg />} titulo="Máquina de cartão" />
           <Item icon={<EscudoSvg />} titulo="Identificação " />
